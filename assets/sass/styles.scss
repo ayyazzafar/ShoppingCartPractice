@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css?family=Open+Sans');
 
 $primary_color: #709b1d;
+$primary_dark_color: #4b6e08;
 $secondary_color:#f3f3f3;
 $dark_text_color: #434343;
 
@@ -13,8 +14,8 @@ body{
         transition:all 0.4s ease;
     }
 
-    a{
-        text-decoration: none;
+    a:hover{ 
+        text-decoration: none; 
     }
 }
 
@@ -94,8 +95,13 @@ header{
     #row3{
         background-color:$secondary_color;
         min-height:37px;
-
+        nav{
+            margin-bottom:0px;
+        }
         .nav{
+
+            
+
             li{
                 padding:0 15px;
                 a
@@ -126,6 +132,52 @@ header{
 /*
 #### HEADER END ####
 */
+
+
+
+.slider{
+
+    .carousel-control
+    {
+
+        &.right, &.left{
+             background-image:none;
+        }
+        .glyphicon-chevron-right, .glyphicon-chevron-left{
+            width:auto;
+            height:auto;
+        }
+        .glyphicon-chevron-right{
+            right:10%;
+        }
+        .glyphicon-chevron-left{
+            left:10%;
+        }
+
+        
+    } 
+
+
+    .carousel-indicators li {
+           
+            background-color: $primary_color;
+            border: 0;
+            border-radius: 0;
+            width:22px;
+            height:17px;
+            margin:0px;
+
+            &.active{
+                background-color:$primary_dark_color;
+            }
+        }
+
+
+   
+}
+
+
+
 
 
 /*
@@ -167,7 +219,7 @@ header{
                 margin-left: auto;
                 width: 100px;
                 display: block;
-                color: #709b1d;
+                color: $primary_color;
                 font-weight: bold;
             }
         }
@@ -175,4 +227,46 @@ header{
     }
     // header end
     
+
+
+    .slider{
+
+        .carousel-control
+        {
+
+           
+
+            .glyphicon-chevron-right{
+                right:36%;
+            }
+            .glyphicon-chevron-left{
+                left:36%;
+            }
+            .glyphicon-chevron-right, .glyphicon-chevron-left{
+                width:20px;
+            }
+            
+
+            
+        } 
+
+
+        .carousel-indicators
+        {
+            margin-bottom:0px;
+            bottom:-0px;
+
+
+            li {
+                width:15px;
+                height:12px;
+            }
+        } 
+        // slider .carousel-indicators end
+        
+    }
+
+
+
+
 }
