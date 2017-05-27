@@ -2,6 +2,7 @@
 
 $primary_color: #709b1d;
 $primary_dark_color: #4b6e08;
+$light_primary_color: #83b228;
 $secondary_color:#f3f3f3;
 $dark_text_color: #434343;
 
@@ -176,6 +177,39 @@ header{
    
 }
 
+/*
+## Slider End
+*/
+
+
+#siteInfo{
+    background: $primary_color;
+    padding-top:10px;; 
+
+    .block{
+        background-color:$light_primary_color;
+        display:block;
+        padding:20px;
+        margin-bottom:10px; 
+        
+        .icon{
+            float:left;
+            font-size:35px;
+            margin-right:10px;
+        }
+        h4, .icon{
+            color:#FFF;
+        }
+        
+        h4,h5{
+            margin:0px;
+        }
+
+        h4{
+            margin-bottom:3px;
+        }
+    }
+}
 
 
 
