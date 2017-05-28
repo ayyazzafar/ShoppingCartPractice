@@ -5,6 +5,13 @@ $primary_dark_color: #4b6e08;
 $light_primary_color: #83b228;
 $secondary_color:#f3f3f3;
 $dark_text_color: #434343;
+$light_grey_color: #efefef;
+
+
+.full_width{
+    display:block;
+    width:100%;
+}
 
 body{
     margin:0px;
@@ -210,8 +217,102 @@ header{
         }
     }
 }
+.rating{
+    text-align: center;
+    .star{
+        display:inline-block;
+
+        width:18px;
+        height:18px;
+        background-position:bottom;
+        background-image:url(../images/starIcon.png);
+
+        &.active{
+            background-position: top;
+        }
+
+    }
+}
+
+.product{
+            background-color:$light_grey_color;
+            padding:2px;
+            text-align: center;
+            
+            .img{
+                background-position: center;
+                width:100%;
+                padding-bottom:100%;
+                background-size:cover;
+                position:relative;
+                margin-bottom:30px;
 
 
+                .title{
+                    position:absolute;
+                    left:0px;
+                    right:0px;
+                    bottom:-20px;
+                    width:90%;
+                    height:40px;
+                    line-height:40px;
+                    font-size:16px;
+                    background-color:#FFF;
+                    border:1px solid $light_grey_color;
+                    color:$primary_color;
+                    margin:auto;
+                    
+
+                }
+                
+                
+            }
+
+            .price{
+                font-weight:bold;
+                font-size:20px;
+                color:#696969;
+                margin-bottom:16px;
+            }
+        }
+
+
+#tabbedSlider{
+    margin-top:88px;
+
+    .header{
+        background-color:$primary_color;
+        padding-top:6px;
+        text-align: center;
+
+        li{
+            float:none;
+            display:inline-block;
+
+            a{
+                color:#FFF;
+                font-size:18px;
+            }
+
+            &.active, &:hover{
+                a{
+                    color:$primary_color;
+                }
+                
+            }
+            
+        }
+    }
+
+
+    .content{
+
+        margin-top:30px;
+    }
+}
+/*
+### #tabbedSlider end
+*/
 
 
 /*
@@ -267,9 +368,6 @@ header{
 
         .carousel-control
         {
-
-           
-
             .glyphicon-chevron-right{
                 right:36%;
             }
