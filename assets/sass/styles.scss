@@ -247,6 +247,22 @@ header{
                 position:relative;
                 margin-bottom:30px;
 
+                .discountBadge{
+                    position:absolute;
+                    top:20px;
+                    left:0px;
+                    width:50px;
+                    height:50px;
+                    text-align: center;
+                    line-height: 50px;
+                    background-color:$primary_color;
+                    color:#FFF;
+
+                    .percent{
+                            transform: rotate(45deg);
+                            display: block;
+                    }
+                }
 
                 .title{
                     position:absolute;
@@ -268,11 +284,21 @@ header{
                 
             }
 
-            .price{
+            .price, .newPrice{
+                
                 font-weight:bold;
                 font-size:20px;
                 color:#696969;
                 margin-bottom:16px;
+                display:inline-block;
+
+                &.discounted{
+                    text-decoration: line-through;
+                }
+            }
+
+            .newPrice{
+                color:$primary_color;
             }
         }
 
@@ -303,11 +329,36 @@ header{
             
         }
     }
-
+ 
 
     .content{
 
         margin-top:30px;
+
+        .carousel {
+            .carousel-control{
+                background: none;
+                    width: 50px;
+                    height: 50px;
+                    position: absolute;
+                    top: -72px;
+              
+
+                .glyphicon{
+                    margin: 0px;
+                    position: relative;
+                    top: 0px;
+                    
+                }
+
+                &.right{
+                    .glyphicon
+                    {
+                        left: 0px;
+                    }
+                }
+            }
+        }
     }
 }
 /*

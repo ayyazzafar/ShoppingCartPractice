@@ -1,6 +1,10 @@
 <?php
 $base_dir = "";
- include("includes/header.php"); ?>
+ include($base_dir."includes/header.php"); 
+ include($base_dir."pages/products/products-slider.php"); 
+ 
+ 
+ ?>
 
 
     <!-- Slider -->
@@ -112,74 +116,65 @@ $base_dir = "";
                 </div>
             </div>
 
+            <?php 
+            $products = array(
+                                 array(
+                                    'title'=>  "1 Smart Phone V1",
+                                    'price' =>  102323, 
+                                    'rating' => 2,
+                                    'img'    => 'product1.jpg', 
+                                    'discount'=>20
+                                ),
 
+                                array(
+                                    'title'=>  "1 Smart Phone V1",
+                                    'price' =>  102323, 
+                                    'rating' => 2,
+                                    'img'    => 'product1.jpg', 
+                                    'discount'=>70
+                                ),
+
+                                array(
+                                    'title'=>  "1 Smart Phone V1",
+                                    'price' =>  102323, 
+                                    'rating' => 2,
+                                    'img'    => 'product1.jpg', 
+                                    'discount'=>0
+                                ),
+
+                                array(
+                                    'title'=>  "1 Smart Phone V1",
+                                    'price' =>  102323, 
+                                    'rating' => 2,
+                                    'img'    => 'product1.jpg', 
+                                    'discount'=>8
+                                ),
+
+                                
+                            );
+
+
+            ?>
 
             <div class="content">
                 <div class="tab-content">
                     <div id="featuredTab" class="tab-pane fade in active">
+                        <?php loadProductsSlider('featuredProducts', $products); ?>
                         
-                        <?php 
-                      
-                            
-                            $products = array(
-                                 array(
-                                    'title'=>  "Smart Phone V1",
-                                    'price' =>  102323, 
-                                    'rating' => 2,
-                                    'img'    => 'product1.jpg'
-                                ),
-
-                                array(
-                                    'title'=>  "Samsung Galaxy s8 +",
-                                    'price' =>  7532, 
-                                    'rating' => 4,
-                                    'img'    => 'product1.jpg'
-                                ),
-
-                                array(
-                                    'title'=>  "Motorola 3310",
-                                    'price' =>  99532, 
-                                    'rating' => 1,
-                                    'img'    => 'product1.jpg'
-                                ),
-                            );
-
-                            foreach($products as $product):
-                                
-                                $product = (object) $product;
-                                ?>
-                                <div class="col-sm-4"> 
-                                    <?php 
-                                    include("pages/products/loop-item.php");
-                                    ?> 
-                                </div>
-                                <?php
-
-                            endforeach; 
-                            
-
-                        ?>
-
-
-
-
                     </div>
-                    <!-- Featured tab end--> 
+                    <!-- Featured tab end-->
 
 
                     <div id="newItemTab" class="tab-pane fade">
-                        <h3>HOME</h3>
-                        <p>Some content.</p>
+                        <?php loadProductsSlider('newItemsProducts', $products); ?>
                     </div>
 
                     <div id="topSellerTab" class="tab-pane fade">
-                        <h3>HOME</h3>
-                        <p>Some content.</p>
+                       <?php loadProductsSlider('topSellerProducts', $products); ?>
                     </div>
 
                     <div id="topRatingTab" class="tab-pane fade">
-                        <h3>HOME</h3>
-                        <p>Some content.</p>
+                       <?php loadProductsSlider('topRatingProducts', $products); ?>
                     </div>
 
                 </div>
@@ -188,5 +183,5 @@ $base_dir = "";
     </div>
 
     <!-- Tabbed slider end-->
-<br><br><br><br><br>
-<?php include('includes/footer.php');
+    <br><br><br><br><br>
+    <?php include('includes/footer.php');

@@ -141,6 +141,19 @@ header {
     background-size: cover;
     position: relative;
     margin-bottom: 30px; }
+    .product .img .discountBadge {
+      position: absolute;
+      top: 20px;
+      left: 0px;
+      width: 50px;
+      height: 50px;
+      text-align: center;
+      line-height: 50px;
+      background-color: #709b1d;
+      color: #FFF; }
+      .product .img .discountBadge .percent {
+        transform: rotate(45deg);
+        display: block; }
     .product .img .title {
       position: absolute;
       left: 0px;
@@ -154,11 +167,16 @@ header {
       border: 1px solid #efefef;
       color: #709b1d;
       margin: auto; }
-  .product .price {
+  .product .price, .product .newPrice {
     font-weight: bold;
     font-size: 20px;
     color: #696969;
-    margin-bottom: 16px; }
+    margin-bottom: 16px;
+    display: inline-block; }
+    .product .price.discounted, .product .newPrice.discounted {
+      text-decoration: line-through; }
+  .product .newPrice {
+    color: #709b1d; }
 
 #tabbedSlider {
   margin-top: 88px; }
@@ -176,6 +194,18 @@ header {
         color: #709b1d; }
   #tabbedSlider .content {
     margin-top: 30px; }
+    #tabbedSlider .content .carousel .carousel-control {
+      background: none;
+      width: 50px;
+      height: 50px;
+      position: absolute;
+      top: -72px; }
+      #tabbedSlider .content .carousel .carousel-control .glyphicon {
+        margin: 0px;
+        position: relative;
+        top: 0px; }
+      #tabbedSlider .content .carousel .carousel-control.right .glyphicon {
+        left: 0px; }
 
 /*
 ### #tabbedSlider end
