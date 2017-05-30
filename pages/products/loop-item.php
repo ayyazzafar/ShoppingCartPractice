@@ -34,9 +34,17 @@
 
         endif;
         
-        ?>"></div>
+        ?>">
+        </div>
         <?php endfor; ?>
         
     </div>
+    <!-- Rating end-->
+
+    <a  class="btn  btnStyle1">
+        <i class="glyphicon glyphicon-shopping-cart
+"></i> Add to Cart
+    </a>
+
     
 </div>

@@ -27,6 +27,28 @@ body{
     }
 }
 
+
+.btnStyle1
+{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #FFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 1px #CCC;
+    color: #709b1d;
+
+    &:hover{
+            background-color: #709b1d;
+        color: #FFF;
+        border-color: #FFF;
+        box-shadow: none;
+    }
+
+    i{
+            transition: all 0s;
+    }
+}
 /*
 #### HEADER START ####
 */
@@ -189,34 +211,6 @@ header{
 */
 
 
-#siteInfo{
-    background: $primary_color;
-    padding-top:10px;; 
-
-    .block{
-        background-color:$light_primary_color;
-        display:block;
-        padding:20px;
-        margin-bottom:10px; 
-        
-        .icon{
-            float:left;
-            font-size:35px;
-            margin-right:10px;
-        }
-        h4, .icon{
-            color:#FFF;
-        }
-        
-        h4,h5{
-            margin:0px;
-        }
-
-        h4{
-            margin-bottom:3px;
-        }
-    }
-}
 .rating{
     text-align: center;
     .star{
@@ -300,71 +294,189 @@ header{
             .newPrice{
                 color:$primary_color;
             }
+            .btn{
+                display:none;
+            }
+            &:hover{
+                background-color:$primary_color;
+
+                .btn{
+                    display: inline-block;
+                }
+
+                .price, .rating, .newPrice {
+                    display:none;
+                }
+            
+            }
         }
 
+#homepage{
 
-#tabbedSlider{
-    margin-top:88px;
 
-    .header{
-        background-color:$primary_color;
-        padding-top:6px;
-        text-align: center;
+    #siteInfo{
+        background: $primary_color;
+        padding-top:10px;; 
 
-        li{
-            float:none;
-            display:inline-block;
-
-            a{
+        .block{
+            background-color:$light_primary_color;
+            display:block;
+            padding:20px;
+            margin-bottom:10px; 
+            
+            .icon{
+                float:left;
+                font-size:35px;
+                margin-right:10px;
+            }
+            h4, .icon{
                 color:#FFF;
-                font-size:18px;
+            }
+            
+            h4,h5{
+                margin:0px;
             }
 
-            &.active, &:hover{
+            h4{
+                margin-bottom:3px;
+            }
+        }
+    }
+
+
+    #tabbedSlider{
+        margin-top:88px;
+        margin-bottom:88px;
+
+        .header{
+            background-color:$primary_color;
+            padding-top:6px;
+            text-align: center;
+
+            li{
+                float:none;
+                display:inline-block;
+
                 a{
-                    color:$primary_color;
+                    color:#FFF;
+                    font-size:18px;
+                }
+
+                &.active, &:hover{
+                    a{
+                        color:$primary_color;
+                    }
+                    
                 }
                 
             }
-            
         }
-    }
- 
+    
 
-    .content{
+        .content{
 
-        margin-top:30px;
+            margin-top:30px;
 
-        .carousel {
-            .carousel-control{
-                background: none;
-                    width: 50px;
-                    height: 50px;
-                    position: absolute;
-                    top: -72px;
-              
+            .carousel {
+                .carousel-control{
+                    background: none;
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        top: -72px;
+                
 
-                .glyphicon{
-                    margin: 0px;
-                    position: relative;
-                    top: 0px;
-                    
-                }
+                    .glyphicon{
+                        margin: 0px;
+                        position: relative;
+                        top: 0px;
+                        
+                    }
 
-                &.right{
-                    .glyphicon
-                    {
-                        left: 0px;
+                    &.right{
+                        .glyphicon
+                        {
+                            left: 0px;
+                        }
                     }
                 }
             }
         }
+
+
+    }
+    /*
+    ### #tabbedSlider end
+    */
+
+
+    #subscribe{
+        padding:50px 0px;
+        background-image:url(../images/subscribeBannerBg.jpg);
+        background-size:cover;
+        background-position:center;
+        color:#FFF;
+
+        .title{
+            font-size:36px;
+            text-transform: uppercase;
+            margin-bottom:20px;
+        }
+
+        p{
+            margin-bottom:40px;
+        }
+
+        form{
+            input, button{
+                background-color:#dde7ca;
+                
+                border-radius:7px;
+                display:inline-block;
+                    border: 3px solid $primary_dark_color;
+                    margin-bottom:5px;
+            }
+            input{
+                padding:10px;
+                font-size:18px;
+                min-width:320px;
+                color:$primary_color;
+                outline:none;
+
+                &:focus{
+                    background-color:$primary_dark_color;
+                    color:#FFF;
+
+                    &::placeholder{
+                        color:#FFF;
+                    }
+                }
+
+                
+
+            }
+
+            button{
+                width:auto;
+                padding:10px 30px;
+                font-weight:bold;
+                    font-size: 18px;
+                    margin-left: 4px;
+                color:$primary_dark_color;
+
+                &:hover{
+                    background-color:$primary_dark_color;
+                    color:#FFF;
+                }
+            }
+            
+        }
+        
     }
 }
 /*
-### #tabbedSlider end
+### #homepage end
 */
-
 
 /*
 ### MEDIA QUERIES START ###
@@ -449,7 +561,42 @@ header{
         
     }
 
+    #homepage{
+        #subscribe{
+            form {
+                    input, button{
+                    width:100%;
+                    }
+
+                    button{
+                        margin-left:0px;
+                    }
+            }
+        }
+    
+        #tabbedSlider{
+            .header{
+                li{
+                    a{
+                            font-size: 9px;
+                            padding: 10px 7px;
+                    }
+                } 
+            } 
+
+            .content .carousel .carousel-control{
+                    font-size: 16px;
+                    top: -61px;
+                        width: 20px;
+                    height: 20px;
 
 
+                    &.left{
+                        left:-8px;
+                    }
+            }
+
+        } 
+    }
 
 }
