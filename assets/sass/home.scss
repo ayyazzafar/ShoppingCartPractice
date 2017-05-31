@@ -1,0 +1,165 @@
+@import "theme.scss";
+
+#homepage{
+
+
+    #siteInfo{
+        background: $primary_color;
+        padding-top:10px;; 
+
+        .block{
+            background-color:$light_primary_color;
+            display:block;
+            padding:20px;
+            margin-bottom:10px; 
+            
+            .icon{
+                float:left;
+                font-size:35px;
+                margin-right:10px;
+            }
+            h4, .icon{
+                color:#FFF;
+            }
+            
+            h4,h5{
+                margin:0px;
+            }
+
+            h4{
+                margin-bottom:3px;
+            }
+        }
+    }
+
+
+    #tabbedSlider{
+        margin-top:88px;
+        margin-bottom:88px;
+
+        .header{
+            background-color:$primary_color;
+            padding-top:6px;
+            text-align: center;
+
+            li{
+                float:none;
+                display:inline-block;
+
+                a{
+                    color:#FFF;
+                    font-size:18px;
+                }
+
+                &.active, &:hover{
+                    a{
+                        color:$primary_color;
+                    }
+                    
+                }
+                
+            }
+        }
+    
+
+        .content{
+
+            margin-top:30px;
+
+            .carousel {
+                .carousel-control{
+                    background: none;
+                        width: 50px;
+                        height: 50px;
+                        position: absolute;
+                        top: -72px;
+                
+
+                    .glyphicon{
+                        margin: 0px;
+                        position: relative;
+                        top: 0px;
+                        
+                    }
+
+                    &.right{
+                        .glyphicon
+                        {
+                            left: 0px;
+                        }
+                    }
+                }
+            }
+        }
+
+
+    }
+    /*
+    ### #tabbedSlider end
+    */
+
+
+    #subscribe{
+        padding:50px 0px;
+        background-image:url(../images/subscribeBannerBg.jpg);
+        background-size:cover;
+        background-position:center;
+        color:#FFF;
+
+        .title{
+            font-size:36px;
+            text-transform: uppercase;
+            margin-bottom:20px;
+        }
+
+        p{
+            margin-bottom:40px;
+        }
+
+        form{
+            input, button{
+                background-color:#dde7ca;
+                
+                border-radius:7px;
+                display:inline-block;
+                    border: 3px solid $primary_dark_color;
+                    margin-bottom:5px;
+            }
+            input{
+                padding:10px;
+                font-size:18px;
+                min-width:320px;
+                color:$primary_color;
+                outline:none;
+
+                &:focus{
+                    background-color:$primary_dark_color;
+                    color:#FFF;
+
+                    &::placeholder{
+                        color:#FFF;
+                    }
+                }
+
+                
+
+            }
+
+            button{
+                width:auto;
+                padding:10px 30px;
+                font-weight:bold;
+                    font-size: 18px;
+                    margin-left: 4px;
+                color:$primary_dark_color;
+
+                &:hover{
+                    background-color:$primary_dark_color;
+                    color:#FFF;
+                }
+            }
+            
+        }
+        
+    }
+}

@@ -1,0 +1,203 @@
+@import "theme.scss";
+
+
+.full_width{
+    display:block;
+    width:100%;
+}
+
+body{
+    margin:0px;
+    padding:0px;
+    font-family:Open Sans;
+
+    &, & *{
+        transition:all 0.4s ease;
+    }
+
+    a:hover{ 
+        text-decoration: none; 
+    }
+}
+
+
+.btnStyle1
+{
+    display: inline-block;
+    padding: 10px 25px;
+    background-color: #FFF;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    box-shadow: 0px 3px 1px #CCC;
+    color: #709b1d;
+
+    &:hover{
+            background-color: #709b1d;
+        color: #FFF;
+        border-color: #FFF;
+        box-shadow: none;
+    }
+
+    i{
+            transition: all 0s;
+    }
+}
+/*
+#### HEADER START ####
+*/
+@import "header.scss";
+
+/*
+#### HEADER END ####
+*/
+
+
+
+.slider{
+
+    .carousel-control
+    {
+
+        &.right, &.left{
+             background-image:none;
+        }
+        .glyphicon-chevron-right, .glyphicon-chevron-left{
+            width:auto;
+            height:auto;
+        }
+        .glyphicon-chevron-right{
+            right:10%;
+        }
+        .glyphicon-chevron-left{
+            left:10%;
+        }
+
+        
+    } 
+
+
+    .carousel-indicators li {
+           
+            background-color: $primary_color;
+            border: 0;
+            border-radius: 0;
+            width:22px;
+            height:17px;
+            margin:0px;
+
+            &.active{
+                background-color:$primary_dark_color;
+            }
+        }
+
+
+   
+}
+
+/*
+## Slider End
+*/
+
+
+.rating{
+    text-align: center;
+    .star{
+        display:inline-block;
+
+        width:18px;
+        height:18px;
+        background-position:bottom;
+        background-image:url(../images/starIcon.png);
+
+        &.active{
+            background-position: top;
+        }
+
+    }
+}
+
+.product{
+            background-color:$light_grey_color;
+            padding:2px;
+            text-align: center;
+            
+            .img{
+                background-position: center;
+                width:100%;
+                padding-bottom:100%;
+                background-size:cover;
+                position:relative;
+                margin-bottom:30px;
+
+                .discountBadge{
+                    position:absolute;
+                    top:20px;
+                    left:0px;
+                    width:50px;
+                    height:50px;
+                    text-align: center;
+                    line-height: 50px;
+                    background-color:$primary_color;
+                    color:#FFF;
+
+                    .percent{
+                            transform: rotate(45deg);
+                            display: block;
+                    }
+                }
+
+                .title{
+                    position:absolute;
+                    left:0px;
+                    right:0px;
+                    bottom:-20px;
+                    width:90%;
+                    height:40px;
+                    line-height:40px;
+                    font-size:16px;
+                    background-color:#FFF;
+                    border:1px solid $light_grey_color;
+                    color:$primary_color;
+                    margin:auto;
+                    
+
+                }
+                
+                
+            }
+
+            .price, .newPrice{
+                
+                font-weight:bold;
+                font-size:20px;
+                color:#696969;
+                margin-bottom:16px;
+                display:inline-block;
+
+                &.discounted{
+                    text-decoration: line-through;
+                }
+            }
+
+            .newPrice{
+                color:$primary_color;
+            }
+            .btn{
+                display:none;
+            }
+            &:hover{
+                background-color:$primary_color;
+
+                .btn{
+                    display: inline-block;
+                }
+
+                .price, .rating, .newPrice {
+                    display:none;
+                }
+            
+            }
+        }
+
+
+@import "footer.scss";

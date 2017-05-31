@@ -1,0 +1,114 @@
+@import "theme.scss";
+
+header{
+    display:block;
+
+
+    /*
+    *   #row1 ( nav 1 ) start
+    */
+
+    #row1{
+        $row1Height:40px;
+        min-height: $row1Height;
+        background-color:$primary_color;
+        padding-bottom:5px;
+
+        .link{
+            display:inline-block;
+            height:$row1Height;
+            padding:10px 10px;
+            color:#FFF;
+            border-bottom-right-radius: 2px;
+            border-bottom-left-radius: 2px;
+            font-size:14px;
+            i{
+                transition:all 0s ease;
+            }
+
+            &:hover, &.active  
+            {
+
+                background-color:#FFF;
+                color:$primary_color !important;
+            }
+        }
+
+        
+
+    }
+
+    /*
+    * #row2
+    */
+
+    #row2{
+        min-height:85px;
+
+        nav{
+            min-height: 0px;
+            background-color:#FFF;
+            border-bottom:0px;
+            margin-top:30px;
+            margin-bottom:0px;
+            border-top:0px;
+
+            .nav {
+                a {
+                    color:$primary_color;
+                    text-transform: uppercase;
+                }
+            }
+            .navbar-brand{
+                height:auto;
+                padding-top:0px; padding-bottom:0px;
+            }
+        }
+    }
+    
+    /*
+    * #row3
+    */
+    #row3{
+        background-color:$secondary_color;
+        min-height:37px;
+
+        #navbar1{
+            padding:0px;
+        }
+        nav{
+            margin-bottom:0px;
+        }
+        .nav{
+
+            
+
+            li{
+                padding:0;
+                a
+                {
+                    color:$primary_color;
+                    text-transform: uppercase;
+                    padding:15px 25px;
+
+                    &:hover, &.active{
+                        background-color:$primary_color;
+                        color:#FFF;
+                    }
+                }
+                
+                
+            }
+
+
+            
+        }
+
+        form{
+                input, button{
+                    border-radius:0px;
+                }
+            }
+    }
+
+}
