@@ -5,9 +5,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Home Page | Sopping</title>
-    <!-- Bootstrap core CSS -->
-    <link href="<?php echo $base_dir; ?>assets/frameworks/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
+   
 
     <!-- Custom styles for this template -->
     <link href="<?php echo $base_dir; ?>assets/css/styles.css" rel="stylesheet" type="text/css">

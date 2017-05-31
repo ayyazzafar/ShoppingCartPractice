@@ -1,6 +1,15 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+$fa-font-path: "../css/font-awesome/fonts/";
+@import "../css/font-awesome/scss/font-awesome";
 @import "theme.scss";
+$icon-font-path: "../frameworks/bootstrap-sass/assets/fonts/bootstrap/";
+$brand-primary:$primary_color;
+@import "../frameworks/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
+.maxWidth100Perc{
+    max-width:100%;
+} 
 .full_width{
     display:block;
     width:100%;

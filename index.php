@@ -198,7 +198,7 @@ $base_dir = "";
             </div>
 
         </div>
-        <br><br><br><br><br>
+  
 
     </div>
     <?php include('includes/footer.php');

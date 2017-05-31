@@ -1,1 +1,88 @@
 @import "theme.scss";
+
+#mainFooter{
+    background-color:$light_grey_color;
+    padding:50px 0px;
+
+
+    .heading{
+        color:$primary_color;
+        text-transform: uppercase;
+        font-size:18px;
+        border-bottom: 1px solid $dark_text_color;
+        padding-bottom:8px;
+        margin-bottom:15px;
+
+        
+    }
+
+    address, numbers, email{
+        display:block;
+        margin-bottom:15px;
+
+    }
+    a.footerLinks{
+            margin-bottom:10px;
+            text-transform: uppercase;
+            padding-left: 5px;
+            color:$dark_text_color;
+            display: block;
+
+            &:hover{
+                color:$primary_color;
+            }
+        }
+
+    
+}
+
+
+#footerIcons{
+        background-color:$grey_color;
+        .paymentMethodIcons{
+            margin-bottom:10px;
+        }
+        .btn{
+                padding: 7px 21px;
+                margin-right:15px;
+                margin-bottom:10px;
+        }
+        .fa{
+                display: inline-block;
+                width: 38px;
+                height: 38px;
+                margin-right: 5px;
+                color: #FFF;
+                border-radius: 3px;
+                text-align: center;
+                line-height: 38px;
+
+            &.fa-facebook{
+                background-color:#3b5998;
+            }
+
+            &.fa-twitter{
+                background-color:#55acee;
+            }
+
+            &.fa-google-plus{
+                background-color:#dd4b39;
+            }
+
+            &.fa-behance{
+                background-color:#1769ff;
+            }
+
+            &.fa-dribbble{
+                background-color:#ea4c89;
+            }
+        }
+
+    }
+
+    sub-footer{
+        display:block;
+        background-color:$primary_color;
+        color:#FFF;
+        padding:10px 0px;
+    }
