@@ -27,7 +27,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-7">
-                        <a class="link" href="#">
+                        <a class="link" href="<?php echo $base_dir; ?>">
                                 <i class="glyphicon glyphicon-home"></i>
                                 Home
                             </a>
@@ -69,7 +69,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         </button>
-                        <a class="navbar-brand" href="#">
+                        <a class="navbar-brand" href="<?php echo $base_dir; ?>">
                             <img src="<?php echo $base_dir; ?>assets/images/logo.jpg" alt="LOGO" />
                         </a>
                     </div>
@@ -86,6 +86,10 @@
 
                                     <li><a href="#">One more separated link</a></li>
                                 </ul>
+                            </li>
+
+                            <li>
+                                <?php include("searchForm.php"); ?>
                             </li>
                         </ul>
                     </div>
@@ -108,24 +112,15 @@
                     </div>
                     <div id="navbar1" class="collapse navbar-collapse">
                         <ul class="nav navbar-nav">
-                            <li><a class="active" href="#">Smartphone</a></li>
-                            <li><a href="#">Desktop</a></li>
-                            <li><a href="#">Laptop</a></li>
-                            <li><a href="#">Accessories</a></li>
-                            <li><a href="#">Networking</a></li>
-                            <li><a href="#">Software</a></li>
+                            <li><a class="active" href="<?php echo $base_dir."pages/products/"; ?>">Smartphone</a></li>
+                            <li><a href="<?php echo $base_dir."pages/products/"; ?>">Desktop</a></li>
+                            <li><a href="<?php echo $base_dir."pages/products/"; ?>">Laptop</a></li>
+                            <li><a href="<?php echo $base_dir."pages/products/"; ?>">Accessories</a></li>
+                            <li><a href="<?php echo $base_dir."pages/products/"; ?>">Networking</a></li>
+                            <li><a href="<?php echo $base_dir."pages/products/"; ?>">Software</a></li>
                         </ul>
 
-                        <form class="navbar-form navbar-right hidden-xs">
-
-                            <div class="form-group  pull-left">
-                                <input type="text" placeholder="Search your item..." class="form-control">
-                            </div>
-                            <button type="submit" class="btn btn-success">
-                                    <i class="glyphicon glyphicon-search"></i>
-
-                                </button>
-                        </form>
+                        
                     </div>
                     <!--/.nav-collapse -->
 

@@ -7,6 +7,53 @@ $brand-primary:$primary_color;
 @import "../frameworks/bootstrap-sass/assets/stylesheets/bootstrap";
 
 
+img{
+    max-width:100%;
+}
+.vMenu{
+
+    .heading{
+        margin-bottom:15px;
+    }
+    ul{
+        padding:0px; margin:0px;
+        list-style-type: none;
+        li{
+            padding:0px;
+        }
+        a{
+            display:block;
+            text-transform: uppercase;
+            color:$dark_text_color;
+            padding:5px;
+            padding-left:0px;
+            &:hover{
+                color:$primary_color;
+            }
+
+            i{
+                display:inline-block;
+                margin-right:10px;
+            }
+        }
+    }
+    
+}
+
+.heading{
+    background-color: $primary_color;
+    color: #FFF;
+    font-size: 18px;
+    text-transform: uppercase;
+    padding: 10px;
+}
+.breadcrumbs{
+    background-color:$primary_color;
+    padding:12px 13px;
+    &, a{
+        color:#FFF;
+    }
+}
 .maxWidth100Perc{
     max-width:100%;
 } 
