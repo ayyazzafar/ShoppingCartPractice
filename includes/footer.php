@@ -5,7 +5,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-3">
-                <div class="heading">
+                <div class="footerHeading">
                     Information
                 </div>
 
@@ -19,7 +19,7 @@
 
 
             <div class="col-sm-3">
-                <div class="heading">
+                <div class="footerHeading">
                     Why Buy From Us
                 </div>
 
@@ -33,7 +33,7 @@
 
 
             <div class="col-sm-3">
-                <div class="heading">
+                <div class="footerHeading">
                     My Account
                 </div>
 
@@ -47,7 +47,7 @@
 
 
             <div class="col-sm-3">
-                <div class="heading">
+                <div class="footerHeading">
                     Contact
                 </div>
 
