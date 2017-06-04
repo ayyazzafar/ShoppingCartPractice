@@ -6,7 +6,25 @@
                                     'price' =>  102323, 
                                     'rating' => 2,
                                     'img'    => 'product1.jpg', 
-                                    'discount'=>20
+                                    'discount'=>20,
+                                    'gallery' =>  array(
+
+                                       (object) array(
+                                            'id'=>1,
+                                            'img'=>'product1.jpg',
+                                        ), 
+
+                                       (object) array(
+                                            'id'=>2,
+                                            'img'=>'product1.jpg',
+                                        ),
+
+                                        (object) array(
+                                            'id'=>3,
+                                            'img'=>'product1.jpg',
+                                        )
+                                        
+                                    )
                                 )
 
                              
@@ -22,14 +40,75 @@
             <div class="col-sm-12">
                 <div class="breadcrumbs">
 
-                    <a href="<?php echo $base_dir; ?>">Home</a> / <a href="<?php echo $base_dir."pages/products/"; ?>">Desktop</a> / Samsung Galaxy S8 +
+                    <a href="<?php echo $base_dir; ?>">Home</a> / <a href="<?php echo $base_dir." pages/products/ "; ?>">Desktop</a>                    / Samsung Galaxy S8 +
                 </div>
 
 
                 <div class="content mt-50">
                     <div class="row">
                         <div class="col-sm-9">
-                            
+
+                            <div class="row">
+                                <div class="col-sm-6">
+
+                                    <div data-interval="false" id="myCarousel" class="carousel slide" data-ride="carousel">
+
+
+                                        <!-- Wrapper for slides -->
+                                        <div class="carousel-inner">
+                                            <?php 
+                                                $index = 0;
+                                                foreach($product->gallery as $image): ?>
+
+                                            <div class="item <?php echo $index==0?'active':''; ?>">
+                                                <img src="<?php echo $base_dir.'assets/uploads/'.$image->img; ?>" alt="Gallery Image - <?php echo $product->title; ?> ">
+                                            </div>
+                                            <?php 
+                                            $index++;
+                                            endforeach; 
+                                            ?>
+
+                                        </div>
+
+                                        <!-- Left and right controls -->
+                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                            <span class="glyphicon glyphicon-chevron-left"></span>
+                                            <span class="sr-only">Previous</span>
+                                        </a>
+                                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                            <span class="glyphicon glyphicon-chevron-right"></span>
+                                            <span class="sr-only">Next</span>
+                                        </a>
+
+
+
+
+
+
+                                        <!-- Indicators -->
+                                        <ol class="carousel-indicators">
+                                                <?php 
+                                                $index = 0;
+                                                foreach($product->gallery as $image): ?>
+
+                                                <li  data-target="#myCarousel" data-slide-to="<?php echo $index; ?>" class=" <?php echo $index==0?'active':''; ?>">
+                                                    <img class="img-responsive" src="<?php echo $base_dir.'assets/uploads/'.$image->img; ?>" alt="Gallery Image - <?php echo $product->title; ?> ">
+                                                </li>
+
+
+                                                <?php 
+                                            $index++;
+                                            endforeach; ?>
+                                                <div class="clearfix"></div>
+                                        </ol>
+                                    </div>
+                                    <!-- slider end-->
+                                </div>
+
+                                <div class="col-sm-6">
+
+                                </div>
+                            </div>
 
                         </div>
 
@@ -86,15 +165,16 @@
                     </div>
 
 
-                   
-                </div> <!-- .content end-->
+
+                </div>
+                <!-- .content end-->
 
             </div>
         </div>
     </div>
     <!-- .container end-->
 
-     <?php include($base_dir."/includes/siteInfoBanner.php"); ?>
+    <?php include($base_dir."/includes/siteInfoBanner.php"); ?>
 
 </div>
 
