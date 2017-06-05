@@ -5,59 +5,57 @@ $fa-font-path: "../css/font-awesome/fonts/";
 $icon-font-path: "../frameworks/bootstrap-sass/assets/fonts/bootstrap/";
 $brand-primary:$primary_color;
 @import "../frameworks/bootstrap-sass/assets/stylesheets/bootstrap";
-
-
-@mixin box-shadow($value){
+@mixin box-shadow($value) {
     -moz-box-shadow: $value;
     -webkit-box-shadow: $value;
     box-shadow: $value;
 }
 
-img{
-    max-width:100%;
+img {
+    max-width: 100%;
 }
-.mt-20{
-    margin-top:20px;
-}
-.mt-50{
-    margin-top:50px;
-}
-.vMenu{
 
-    margin-bottom:50px;
+.mt-20 {
+    margin-top: 20px;
+}
 
-    .heading{
-        margin-bottom:15px;
+.mt-50 {
+    margin-top: 50px;
+}
+
+.vMenu {
+    margin-bottom: 50px;
+    .heading {
+        margin-bottom: 15px;
     }
-    ul{
-        padding:0px; margin:0px;
+    ul {
+        padding: 0px;
+        margin: 0px;
         list-style-type: none;
-        li{
-            padding:0px;
+        li {
+            padding: 0px;
         }
-        a, label{
-            display:block;
+        a,
+        label {
+            display: block;
             text-transform: uppercase;
-            color:$dark_text_color;
-            padding:5px;
-            padding-left:0px;
+            color: $dark_text_color;
+            padding: 5px;
+            padding-left: 0px;
             font-weight: normal;
-            &:hover{
-                color:$primary_color;
+            &:hover {
+                color: $primary_color;
             }
-
-            i{
-                display:inline-block;
-                margin-right:10px;
+            i {
+                display: inline-block;
+                margin-right: 10px;
             }
         }
     }
-
-    &.checkboxes{
-        label{
-
-            &:before{
-                    content: " ";
+    &.checkboxes {
+        label {
+            &:before {
+                content: " ";
                 display: block;
                 width: 15px;
                 height: 15px;
@@ -65,96 +63,101 @@ img{
                 background-color: #FFF;
                 margin-right: 10px;
                 margin-top: 4px;
-                float:left;
-                box-shadow: 1px; 
-
-                 @include box-shadow(inset 0 0 5px #929292);
-                
-
-
-            
+                float: left;
+                box-shadow: 1px;
+                @include box-shadow(inset 0 0 5px #929292);
             }
-
-
-           
         }
-
-        input[type="checkbox"]:checked + label{
-            &:before{
-                 @include box-shadow(inset 0 0 5px #6b6b6b);
-                background-color:$primary_color;
+        input[type="checkbox"]:checked+label {
+            &:before {
+                @include box-shadow(inset 0 0 5px #6b6b6b);
+                background-color: $primary_color;
             }
         }
     }
-    
 }
-#siteInfo{
-        background: $primary_color;
-        padding-top:10px;; 
 
-        .block{
-            background-color:$light_primary_color;
-            display:block;
-            padding:20px;
-            margin-bottom:10px; 
-            
-            .icon{
-                float:left;
-                font-size:35px;
-                margin-right:10px;
-            }
-            h4, .icon{
-                color:#FFF;
-            }
-            
-            h4,h5{
-                margin:0px;
-            }
-
-            h4{
-                margin-bottom:3px;
-            }
+#siteInfo {
+    background: $primary_color;
+    padding-top: 10px;
+    ;
+    .block {
+        background-color: $light_primary_color;
+        display: block;
+        padding: 20px;
+        margin-bottom: 10px;
+        .icon {
+            float: left;
+            font-size: 35px;
+            margin-right: 10px;
+        }
+        h4,
+        .icon {
+            color: #FFF;
+        }
+        h4,
+        h5 {
+            margin: 0px;
+        }
+        h4 {
+            margin-bottom: 3px;
         }
     }
-.heading{
+}
+
+.heading {
     background-color: $primary_color;
     color: #FFF;
     font-size: 18px;
     text-transform: uppercase;
     padding: 10px;
 }
-.breadcrumbs{
-    background-color:$primary_color;
-    padding:12px 13px;
-    &, a{
-        color:#FFF;
-    }
-}
-.maxWidth100Perc{
-    max-width:100%;
-} 
-.full_width{
-    display:block;
-    width:100%;
-}
 
-body{
-    margin:0px;
-    padding:0px;
-    font-family:Open Sans;
-
-    &, & *{
-        transition:all 0.4s ease;
-    }
-
-    a:hover{ 
-        text-decoration: none; 
+.breadcrumbs {
+    background-color: $primary_color;
+    padding: 12px 13px;
+    &,
+    a {
+        color: #FFF;
     }
 }
 
+.maxWidth100Perc {
+    max-width: 100%;
+}
 
-.btnStyle1
-{
+.full_width {
+    display: block;
+    width: 100%;
+}
+
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: Open Sans;
+    &,
+    & * {
+        transition: all 0.4s ease;
+    }
+    a:hover {
+        text-decoration: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    p,
+    ul,
+    li {
+        margin-top: 0px;
+        padding: 0px;
+    }
+}
+
+.btnStyle1,
+.btnStyle2 {
     display: inline-block;
     padding: 10px 25px;
     background-color: #FFF;
@@ -162,174 +165,222 @@ body{
     margin-bottom: 10px;
     box-shadow: 0px 3px 1px #CCC;
     color: #709b1d;
-
-    &:hover{
-            background-color: #709b1d;
+    &:hover {
+        background-color: #709b1d;
         color: #FFF;
         border-color: #FFF;
         box-shadow: none;
     }
-
-    i{
-            transition: all 0s;
+    i {
+        transition: all 0s;
     }
 }
+
+.btnStyle2 {
+    background-color: $primary-color;
+    color: #FFF;
+    box-shadow: $secondary_color;
+    &:hover {
+        background-color: #FFF;
+        color: $primary_color;
+        border-color: $primary_color;
+    }
+}
+
+
 /*
 #### HEADER START ####
 */
+
 @import "header.scss";
 
 /*
 #### HEADER END ####
 */
 
+.socialIcons2 {
+    .text {
+        float: left;
+        margin-right: 10px;
+        font-size: 18px;
+    }
+    a {
+        display: block;
+        float: left;
+        margin-right: 10px;
+        width: 20px;
+        height: 20px;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 5px;
+        color:#FFF;
 
-
-.slider{
-
-    .carousel-control
-    {
-
-        &.right, &.left{
-             background-image:none;
-        }
-        .glyphicon-chevron-right, .glyphicon-chevron-left{
-            width:auto;
-            height:auto;
-        }
-        .glyphicon-chevron-right{
-            right:10%;
-        }
-        .glyphicon-chevron-left{
-            left:10%;
-        }
-
-        
-    } 
-
-
-    .carousel-indicators li {
-           
-            background-color: $primary_color;
-            border: 0;
-            border-radius: 0;
-            width:22px;
-            height:17px;
-            margin:0px;
-
-            &.active{
-                background-color:$primary_dark_color;
-            }
+        &.facebook{
+            background-color:$facebook_color;
         }
 
+        &.pinterest{
+            background-color:$pinterest_color;
+        }
 
-   
-}
+        &.twitter{ 
+            background-color:$twitter_color;
+        }
 
-/*
-## Slider End
-*/
-
-
-.rating{
-    text-align: center;
-    .star{
-        display:inline-block;
-
-        width:18px;
-        height:18px;
-        background-position:bottom;
-        background-image:url(../images/starIcon.png);
-
-        &.active{
-            background-position: top;
+        &.googlePlus{
+            background-color:$google_plus_color;
         }
 
     }
 }
 
-.product{
-            background-color:$light_grey_color;
-            padding:2px;
+.slider {
+    .carousel-control {
+        &.right,
+        &.left {
+            background-image: none;
+        }
+        .glyphicon-chevron-right,
+        .glyphicon-chevron-left {
+            width: auto;
+            height: auto;
+        }
+        .glyphicon-chevron-right {
+            right: 10%;
+        }
+        .glyphicon-chevron-left {
+            left: 10%;
+        }
+    }
+    .carousel-indicators li {
+        background-color: $primary_color;
+        border: 0;
+        border-radius: 0;
+        width: 22px;
+        height: 17px;
+        margin: 0px;
+        &.active {
+            background-color: $primary_dark_color;
+        }
+    }
+}
+
+
+/*
+## Slider End
+*/
+
+.rating {
+    text-align: center;
+    .star {
+        display: inline-block;
+        width: 18px;
+        height: 18px;
+        background-position: bottom;
+        background-image: url(../images/starIcon.png);
+        &.active {
+            background-position: top;
+        }
+    }
+}
+
+.rating2 {
+    line-height: 21px;
+    .star {
+        display: block;
+        float: left;
+        width: 20px;
+        height: 18px;
+        margin-right: 5px;
+        background-position: bottom;
+        background-image: url(../images/starIcon2.png);
+        &.active {
+            background-position: top;
+        }
+    }
+    .text {
+        display: block;
+        float: left;
+        margin-left: 5px;
+        font-size: 16px;
+        color: $dark_text_color;
+    }
+}
+
+.price,
+.newPrice {
+    font-weight: bold;
+    font-size: 20px;
+    color: #696969;
+    display: inline-block;
+    &.discounted {
+        text-decoration: line-through;
+    }
+}
+
+.newPrice {
+    color: $primary_color;
+}
+
+.product {
+    background-color: $light_grey_color;
+    padding: 2px;
+    text-align: center;
+    .img {
+        background-position: center;
+        width: 100%;
+        padding-bottom: 100%;
+        background-size: cover;
+        position: relative;
+        margin-bottom: 30px;
+        .discountBadge {
+            position: absolute;
+            top: 20px;
+            left: 0px;
+            width: 50px;
+            height: 50px;
             text-align: center;
-            
-            .img{
-                background-position: center;
-                width:100%;
-                padding-bottom:100%;
-                background-size:cover;
-                position:relative;
-                margin-bottom:30px;
-
-                .discountBadge{
-                    position:absolute;
-                    top:20px;
-                    left:0px;
-                    width:50px;
-                    height:50px;
-                    text-align: center;
-                    line-height: 50px;
-                    background-color:$primary_color;
-                    color:#FFF;
-
-                    .percent{
-                            transform: rotate(45deg);
-                            display: block;
-                    }
-                }
-
-                .title{
-                    position:absolute;
-                    left:0px;
-                    right:0px;
-                    bottom:-20px;
-                    width:90%;
-                    height:40px;
-                    line-height:40px;
-                    font-size:16px;
-                    background-color:#FFF;
-                    border:1px solid $light_grey_color;
-                    color:$primary_color;
-                    margin:auto;
-                    
-
-                }
-                
-                
-            }
-
-            .price, .newPrice{
-                
-                font-weight:bold;
-                font-size:20px;
-                color:#696969;
-                margin-bottom:16px;
-                display:inline-block;
-
-                &.discounted{
-                    text-decoration: line-through;
-                }
-            }
-
-            .newPrice{
-                color:$primary_color;
-            }
-            .btn{
-                display:none;
-            }
-            &:hover{
-                background-color:$primary_color;
-
-                .btn{
-                    display: inline-block;
-                }
-
-                .price, .rating, .newPrice {
-                    display:none;
-                }
-            
+            line-height: 50px;
+            background-color: $primary_color;
+            color: #FFF;
+            .percent {
+                transform: rotate(45deg);
+                display: block;
             }
         }
-
+        .title {
+            position: absolute;
+            left: 0px;
+            right: 0px;
+            bottom: -20px;
+            width: 90%;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            background-color: #FFF;
+            border: 1px solid $light_grey_color;
+            color: $primary_color;
+            margin: auto;
+        }
+    }
+    .price,
+    .newPrice {
+        margin-bottom: 16px;
+    }
+    .btn {
+        display: none;
+    }
+    &:hover {
+        background-color: $primary_color;
+        .btn {
+            display: inline-block;
+        }
+        .price,
+        .rating,
+        .newPrice {
+            display: none;
+        }
+    }
+}
 
 @import "footer.scss";

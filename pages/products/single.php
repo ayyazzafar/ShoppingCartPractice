@@ -51,16 +51,22 @@
                             <div class="row">
                                 <div class="col-sm-6">
 
-                                    <div data-interval="false" id="myCarousel" class="carousel slide" data-ride="carousel">
+                                    <div data-interval="false" id="gallerySlider" class="carousel slide" data-ride="carousel">
 
-
+                                        <div class="saleBadge <?php  echo $product->discount?' active ':''; ?>"></div>
                                         <!-- Wrapper for slides -->
                                         <div class="carousel-inner">
+
                                             <?php 
                                                 $index = 0;
                                                 foreach($product->gallery as $image): ?>
 
-                                            <div class="item <?php echo $index==0?'active':''; ?>">
+                                            <div class="item <?php 
+                                            
+                                            
+                                            echo $index==0?'active':''; ?>">
+
+
                                                 <img src="<?php echo $base_dir.'assets/uploads/'.$image->img; ?>" alt="Gallery Image - <?php echo $product->title; ?> ">
                                             </div>
                                             <?php 
@@ -71,11 +77,11 @@
                                         </div>
 
                                         <!-- Left and right controls -->
-                                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                                        <a class="left carousel-control" href="#gallerySlider" data-slide="prev">
                                             <span class="glyphicon glyphicon-chevron-left"></span>
                                             <span class="sr-only">Previous</span>
                                         </a>
-                                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                                        <a class="right carousel-control" href="#gallerySlider" data-slide="next">
                                             <span class="glyphicon glyphicon-chevron-right"></span>
                                             <span class="sr-only">Next</span>
                                         </a>
@@ -87,26 +93,76 @@
 
                                         <!-- Indicators -->
                                         <ol class="carousel-indicators">
-                                                <?php 
+                                            <?php 
                                                 $index = 0;
                                                 foreach($product->gallery as $image): ?>
 
-                                                <li  data-target="#myCarousel" data-slide-to="<?php echo $index; ?>" class=" <?php echo $index==0?'active':''; ?>">
-                                                    <img class="img-responsive" src="<?php echo $base_dir.'assets/uploads/'.$image->img; ?>" alt="Gallery Image - <?php echo $product->title; ?> ">
-                                                </li>
+                                            <li data-target="#gallerySlider" data-slide-to="<?php echo $index; ?>" class=" <?php echo $index==0?'active':''; ?>">
+                                                <img class="img-responsive" src="<?php echo $base_dir.'assets/uploads/'.$image->img; ?>" alt="Gallery Image - <?php echo $product->title; ?> ">
+                                            </li>
 
 
-                                                <?php 
+                                            <?php 
                                             $index++;
                                             endforeach; ?>
-                                                <div class="clearfix"></div>
+                                            <div class="clearfix"></div>
                                         </ol>
                                     </div>
                                     <!-- slider end-->
+
+                                    <div class="socialIcons2">
+                                        <div class="text">
+                                            Share This
+                                        </div>
+
+                                        <a href="https://facebook.com" class="facebook" ><i class="fa fa-facebook"></i></a>
+
+                                        <a href="https://facebook.com" class="twitter" ><i class="fa fa-twitter"></i></a>
+
+                                        <a href="https://facebook.com" class="googlePlus" ><i class="fa fa-google-plus"></i></a>
+
+                                        <a href="https://facebook.com" class="pinterest" ><i class="fa fa-pinterest"></i></a>
+                                    </div>
+
                                 </div>
 
-                                <div class="col-sm-6">
+                                <div class="col-sm-6 details">
+                                    <h1>
+                                        <?php echo $product->title; ?>
+                                    </h1>
+                                    <div class="rating2">
+                                        <div class="star active"></div>
+                                        <div class="star active"></div>
+                                        <div class="star active"></div>
+                                        <div class="star"></div>
+                                        <div class="star "></div>
+                                        <div class="text">
+                                            1 Review
+                                        </div>
 
+                                        <div class="clearfix"></div>
+                                    </div>
+
+                                    <hr> Menufecturer: Chanel<br> Availability: In Stock 20 item(s)<br> Product Code: PC03<br><br>
+                                    <strong>Product Dimensions and Weight</strong><br> Product Length: 10.0000m<br> Product
+                                    Weight: 10.0000kg
+                                    <hr>
+                                    <p>
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Suspendisse vehicula condimentum porttitor. Donec ullamcorper
+
+
+                                    </p>
+
+                                    <hr>
+
+                                    <div class="price discounted">$50,231.00</div>&nbsp; &nbsp;
+                                    <div class="newPrice price">$10,452.00</div>
+                                    <br>
+
+                                    <a class="btn  btnStyle2">
+                                        <i class="glyphicon glyphicon-shopping-cart
+                                "></i> Add to Cart
+                                    </a>
                                 </div>
                             </div>
 

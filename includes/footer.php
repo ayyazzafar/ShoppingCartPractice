@@ -81,7 +81,7 @@
     <div class="container">
         <div class="row">
             <div class="col-sm-6">
-                <a href="#" class="btn btn-primary">We Accept</a>
+                <a href="#" class="pull-left btn btn-primary">We Accept</a>
                 <img class="paymentMethodIcons" src="<?php echo $base_dir; ?>assets/images/paymentMethodsIcons.png" class="maxWidth100Perc" />
             </div>
 
