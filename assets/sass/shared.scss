@@ -326,6 +326,7 @@ body {
     background-color: $light_grey_color;
     padding: 2px;
     text-align: center;
+    margin-bottom:30px;
     .img {
         background-position: center;
         width: 100%;
@@ -362,6 +363,10 @@ body {
             color: $primary_color;
             margin: auto;
         }
+    }
+
+    .details{
+            height: 83px;
     }
     .price,
     .newPrice {
