@@ -115,13 +115,13 @@
                                             Share This
                                         </div>
 
-                                        <a href="https://facebook.com" class="facebook" ><i class="fa fa-facebook"></i></a>
+                                        <a href="https://facebook.com" class="facebook"><i class="fa fa-facebook"></i></a>
 
-                                        <a href="https://facebook.com" class="twitter" ><i class="fa fa-twitter"></i></a>
+                                        <a href="https://facebook.com" class="twitter"><i class="fa fa-twitter"></i></a>
 
-                                        <a href="https://facebook.com" class="googlePlus" ><i class="fa fa-google-plus"></i></a>
+                                        <a href="https://facebook.com" class="googlePlus"><i class="fa fa-google-plus"></i></a>
 
-                                        <a href="https://facebook.com" class="pinterest" ><i class="fa fa-pinterest"></i></a>
+                                        <a href="https://facebook.com" class="pinterest"><i class="fa fa-pinterest"></i></a>
                                     </div>
 
                                 </div>
@@ -166,6 +166,56 @@
                                 </div>
                             </div>
 
+
+                            <div id="tabs" class="row">
+                                <div class="col-sm-12">
+                                    <ul class="nav nav-tabs" role="tablist">
+
+                                        <li role="presentation" class="active"><a href="#reviews" aria-controls="reviews" role="tab" data-toggle="tab">Reviews</a></li>
+
+                                    </ul>
+
+                                    <div class="tab-content">
+                                       
+
+                                        <div role="tabpanel" class="tab-pane fade in active" id="reviews">
+                                            <div class="title">
+                                                Last Review
+                                            </div>
+
+                                            <div class="content">
+                                                <header>
+                                                    <name>By Bin Burhan</name>
+
+                                                    <div class="timeframe">
+                                                        <div class="fa fa-clock-o"></div> 10:05pm &nbsp;
+                                                        <div class="fa fa-bell"></div> Sunday &nbsp;
+                                                        <fa class="fa fa-calendar"></fa> 26 December &nbsp;
+
+                                                    </div>
+
+                                                    <div class="rating2 pull-right">
+                                                        <div class="star active"></div>
+                                                        <div class="star active"></div>
+                                                        <div class="star active"></div>
+                                                        <div class="star active"></div>
+                                                        <div class="star"></div>
+                                                    </div>
+                                                </header>
+
+                                                <content-container>
+                                                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book
+                                                </content-container>
+
+
+                                            </div>
+
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
                         </div>
 
                         <div class="col-sm-3">

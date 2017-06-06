@@ -1,8 +1,8 @@
 @import "../theme.scss";
 #singleProductPage {
-     color:$dark_text_color;
+    color: $dark_text_color;
     #gallerySlider {
-        margin-bottom:30px;
+        margin-bottom: 30px;
         .carousel-control {
             top: auto;
             left: -16px;
@@ -78,12 +78,60 @@
     /*
     carousel end
     */
-
-    .details{
-        line-height:30px;
+    .details {
+        line-height: 30px;
     }
-
-    .socialIcons2{
-        margin-bottom:30px;
+    .socialIcons2 {
+        margin-bottom: 30px;
     }
+    #tabs {
+        margin-bottom:50px;
+        .nav-tabs {
+            li {
+                a {
+                    color: $dark_text_color;
+                    font-size: 18px;
+                    font-weight: bold;
+                    border: 0px !important;
+                }
+                &.active {
+                    a {
+                        background-color: $light_grey_color;
+                    }
+                }
+            }
+        }
+        .tab-content {
+            .tab-pane {
+                background-color: $light_grey_color;
+                padding: 20px;
+                .title {
+                    font-size: 16px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid $grey_color;
+                    margin-bottom:20px;
+                }
+                &#reviews {
+
+                    name,
+                    .timeframe {
+                        display: inline-block;
+                    }
+                    name{
+                        font-size:16px;
+                        color:$dark_text_color;
+                        margin-right:30px;
+                    }
+                }
+
+                header{
+                    display:block;
+                    margin-bottom:40px;
+                }
+            }
+        }
+    }
+    /*
+    ## #tabs end 
+    */
 }

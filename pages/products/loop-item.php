@@ -11,7 +11,7 @@
         </div>
         <?php endif; ?>
 
-        <a href="<?php echo $base_dir." pages/products/single.php "; ?>" class="title"><?php echo $product->title; ?></a>
+        <a href="<?php echo $base_dir."pages/products/single.php"; ?>" class="title"><?php echo $product->title; ?></a>
     </div>
     <div class="details">
         <div class="price <?php echo $product->discount>0?" discounted ":'';  ?>   ">
