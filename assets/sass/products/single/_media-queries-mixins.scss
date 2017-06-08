@@ -3,7 +3,7 @@
     {
         .glyphicon
         {
-                margin-top: 18px;
+                margin-top: 0;
             .glyphicon-chevron-right{
                 margin-right:5px;
                 
@@ -14,5 +14,13 @@
                 
             }
         }
+    }
+}
+
+@mixin single-max-width-767(){
+    #singleProductPage h1
+    {
+        margin-top:20px;
+        font-size:26px;
     }
 }

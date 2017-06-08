@@ -4,7 +4,7 @@
 <footer id="mainFooter">
     <div class="container">
         <div class="row">
-            <div class="col-sm-3">
+            <div class="col-md-3 col-sm-6">
                 <div class="footerHeading">
                     Information
                 </div>
@@ -18,7 +18,7 @@
             </div>
 
 
-            <div class="col-sm-3">
+            <div class="col-md-3 col-sm-6">
                 <div class="footerHeading">
                     Why Buy From Us
                 </div>
@@ -32,7 +32,7 @@
             </div>
 
 
-            <div class="col-sm-3">
+            <div class="col-md-3 col-sm-6">
                 <div class="footerHeading">
                     My Account
                 </div>
@@ -46,7 +46,7 @@
             </div>
 
 
-            <div class="col-sm-3">
+            <div class="col-md-3 col-sm-6">
                 <div class="footerHeading">
                     Contact
                 </div>
@@ -80,12 +80,12 @@
 <div id="footerIcons">
     <div class="container">
         <div class="row">
-            <div class="col-sm-6">
-                <a href="#" class="pull-left btn btn-primary">We Accept</a>
+            <div class="col-md-6 text-center">
+                <a href="#" class=" btn btn-primary">We Accept</a>
                 <img class="paymentMethodIcons" src="<?php echo $base_dir; ?>assets/images/paymentMethodsIcons.png" class="maxWidth100Perc" />
             </div>
 
-            <div class="col-sm-6">
+            <div class="col-md-6 text-center">
                 <a href="#" class="btn btn-primary">Follow Us</a>
                 <span class="socialIcons">
                             <a href="#" class="icon">

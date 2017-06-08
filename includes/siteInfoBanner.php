@@ -5,7 +5,7 @@
                 <div class="row">
 
 
-                    <div class="col-sm-3">
+                    <div class="col-md-3 col-sm-6">
 
                         <div class="block">
                             <i class="icon glyphicon glyphicon-send"></i>
@@ -15,7 +15,7 @@
 
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class="col-md-3 col-sm-6">
 
                         <div class="block">
                             <i class="icon glyphicon glyphicon-lock"></i>
@@ -25,7 +25,7 @@
 
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class="col-md-3 col-sm-6">
 
                         <div class="block">
                             <i class="icon glyphicon glyphicon-time"></i>
@@ -35,7 +35,7 @@
 
                     </div>
 
-                    <div class="col-sm-3">
+                    <div class="col-md-3 col-sm-6">
 
                         <div class="block">
                             <i class="icon glyphicon glyphicon-shopping-cart"></i>

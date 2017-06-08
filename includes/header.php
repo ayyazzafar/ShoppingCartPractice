@@ -26,7 +26,7 @@
         <div id="row1">
             <div class="container">
                 <div class="row">
-                    <div class="col-sm-7">
+                    <div class="col-md-7 col-sm-8">
                         <a class="link" href="<?php echo $base_dir; ?>">
                                 <i class="glyphicon glyphicon-home"></i>
                                 Home
@@ -42,7 +42,7 @@
                                 <i class="glyphicon glyphicon-ok"></i>
                                 Checkout</a>
                     </div>
-                    <div class="col-sm-5">
+                    <div class="col-md-5 col-sm-4">
                         <div class="dropdown pull-right currencyDropdown">
                             <a href="#" class=" link active dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Currency <span class="caret"></span></a>
                             <ul class="dropdown-menu">

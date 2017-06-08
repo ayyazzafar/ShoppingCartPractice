@@ -25,12 +25,13 @@
         &:hover {
             color: $primary_color;
         }
-    }
+    } 
 }
 
 #footerIcons {
     background-color: $grey_color;
     padding-top: 12px;
+    padding-bottom:12px;
     .paymentMethodIcons {
         margin-bottom: 10px;
     }

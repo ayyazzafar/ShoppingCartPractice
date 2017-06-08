@@ -3,18 +3,20 @@
 @import "header/media-queries-mixins";
 @import "footer/media-queries-mixins";
 @import "home/media-queries-mixins";
-@import "products/media-queries-mixins";
+@import "products/single/media-queries-mixins";
 
-@media( max-width:768px){
-
+// for tablets
+@media( max-width:768px) {
+    @include header-max-width-768();
     @include single-max-width-768();
 }
 
-@media( max-width:767px){
-   
+// for devices smaller than tablets
+@media( max-width:767px) {
+    
     @include header-max-width-767();
     @include shared-max-width-767();
     @include home-max-width-767();
+    @include single-max-width-767();
     @include footer-max-width-767();
-    
 }

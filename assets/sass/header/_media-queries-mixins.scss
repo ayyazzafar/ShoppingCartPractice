@@ -1,35 +1,39 @@
-@mixin header-max-width-767(){
-
-     header{
-        #row1
-        {
-            .link{
-
-                font-size:10px;
-                padding:10px 5px;
-                height:auto;
-
-                
-            }
-            // header #row1 .link end
-
-            .currencyDropdown{
-                    width:100%;
-                    a, .dropdown-menu{
-                        width:100%;
+@mixin header-max-width-768() {
+    header {
+        #row3 {
+            .nav {
+                li {
+                    a {
+                        padding: 15px 21px;
                     }
-                    .dropdown-menu{
-                        border-top:0px;
-                        border-radius:0px;
-                    }
-                
                 }
+            }
         }
-        // header #row1 end
+    }
+}
 
-
-        #row3{
-            .navbar-toggle{
+@mixin header-max-width-767() {
+    header {
+        #row1 {
+            .link {
+                font-size: 10px;
+                padding: 10px 5px;
+                height: auto;
+            } // header #row1 .link end
+            .currencyDropdown {
+                width: 100%;
+                a,
+                .dropdown-menu {
+                    width: 100%;
+                }
+                .dropdown-menu {
+                    border-top: 0px;
+                    border-radius: 0px;
+                }
+            }
+        } // header #row1 end
+        #row3 {
+            .navbar-toggle {
                 float: none;
                 margin-right: auto;
                 margin-left: auto;
@@ -38,9 +42,8 @@
                 color: $primary_color;
                 font-weight: bold;
             }
-        }
-        // header #row3 end
-    }
-    // header end
+        } // header #row3 end
+    } // header end
 }
+
 // header-max-width-767() end
