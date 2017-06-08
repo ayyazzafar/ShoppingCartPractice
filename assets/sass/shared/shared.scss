@@ -192,7 +192,7 @@ body {
 #### HEADER START ####
 */
 
-@import "header.scss";
+@import "header/header.scss";
 
 /*
 #### HEADER END ####
@@ -388,4 +388,4 @@ body {
     }
 }
 
-@import "footer.scss";
+@import "footer/footer.scss";

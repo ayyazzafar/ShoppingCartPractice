@@ -1,128 +1,20 @@
 @import "theme.scss";
+@import "shared/media-queries-mixins";
+@import "header/media-queries-mixins";
+@import "footer/media-queries-mixins";
+@import "home/media-queries-mixins";
+@import "products/media-queries-mixins";
+
+@media( max-width:768px){
+
+    @include single-max-width-768();
+}
 
 @media( max-width:767px){
-    header{
-        #row1
-        {
-            .link{
-
-                font-size:10px;
-                padding:10px 5px;
-                height:auto;
-
-                
-            }
-            // header #row1 .link end
-
-            .currencyDropdown{
-                    width:100%;
-                    a, .dropdown-menu{
-                        width:100%;
-                    }
-                    .dropdown-menu{
-                        border-top:0px;
-                        border-radius:0px;
-                    }
-                
-                }
-        }
-        // header #row1 end
-
-
-        #row3{
-            .navbar-toggle{
-                float: none;
-                margin-right: auto;
-                margin-left: auto;
-                width: 100px;
-                display: block;
-                color: $primary_color;
-                font-weight: bold;
-            }
-        }
-        // header #row3 end
-    }
-    // header end
+   
+    @include header-max-width-767();
+    @include shared-max-width-767();
+    @include home-max-width-767();
+    @include footer-max-width-767();
     
-
-
-    .slider{
-
-        .carousel-control
-        {
-            .glyphicon-chevron-right{
-                right:36%;
-            }
-            .glyphicon-chevron-left{
-                left:36%;
-            }
-            .glyphicon-chevron-right, .glyphicon-chevron-left{
-                width:20px;
-            }
-            
-
-            
-        } 
-
-
-        .carousel-indicators
-        {
-            margin-bottom:0px;
-            bottom:-0px;
-
-
-            li {
-                width:15px;
-                height:12px;
-            }
-        } 
-        // slider .carousel-indicators end
-        
-    }
-
-    #homepage{
-        #subscribe{
-            form {
-                    input, button{
-                    width:100%;
-                    }
-
-                    button{
-                        margin-left:0px;
-                    }
-            }
-        }
-    
-        #tabbedSlider{
-            .header{
-                li{
-                    a{
-                            font-size: 9px;
-                            padding: 10px 7px;
-                    }
-                } 
-            } 
-
-            .content .carousel .carousel-control{
-                    font-size: 16px;
-                    top: -61px;
-                        width: 20px;
-                    height: 20px;
-
-
-                    &.left{
-                        left:-8px;
-                    }
-            }
-
-        } 
-    }
-
-    #footerIcons{
-        .paymentMethodIcons{
-            width:220px;
-            
-        }
-    }
-
 }

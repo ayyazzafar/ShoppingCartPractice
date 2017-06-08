@@ -1,0 +1,39 @@
+@mixin home-max-width-767(){
+    #homepage{
+        #subscribe{
+            form {
+                    input, button{
+                    width:100%;
+                    }
+
+                    button{
+                        margin-left:0px;
+                    }
+            }
+        }
+    
+        #tabbedSlider{
+            .header{
+                li{
+                    a{
+                            font-size: 9px;
+                            padding: 10px 7px;
+                    }
+                } 
+            } 
+
+            .content .carousel .carousel-control{
+                    font-size: 16px;
+                    top: -61px;
+                        width: 20px;
+                    height: 20px;
+
+
+                    &.left{
+                        left:-8px;
+                    }
+            }
+
+        } 
+    }
+}

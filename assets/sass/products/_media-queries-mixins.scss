@@ -1,0 +1,18 @@
+@mixin single-max-width-768(){
+    #singleProductPage #gallerySlider
+    {
+        .glyphicon
+        {
+                margin-top: 18px;
+            .glyphicon-chevron-right{
+                margin-right:5px;
+                
+            }
+
+            .glyphicon-chevron-left{
+                margin-left:5px;
+                
+            }
+        }
+    }
+}

@@ -1,0 +1,41 @@
+@mixin shared-max-width-768(){
+    
+}
+
+@mixin shared-max-width-767()
+{
+
+    .slider{
+
+        .carousel-control
+        {
+            .glyphicon-chevron-right{
+                right:36%;
+            }
+            .glyphicon-chevron-left{
+                left:36%;
+            }
+            .glyphicon-chevron-right, .glyphicon-chevron-left{
+                width:20px;
+            }
+            
+
+            
+        } 
+
+
+        .carousel-indicators
+        {
+            margin-bottom:0px;
+            bottom:-0px;
+
+
+            li {
+                width:15px;
+                height:12px;
+            }
+        } 
+        // slider .carousel-indicators end
+        
+    }
+}
