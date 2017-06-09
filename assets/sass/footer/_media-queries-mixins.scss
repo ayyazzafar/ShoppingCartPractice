@@ -1,8 +1,25 @@
-@mixin footer-max-width-767(){
-    #footerIcons{
-        .paymentMethodIcons{
-            width:220px;
-            
+@mixin footer-max-width-767() {
+    #footerIcons {
+        .paymentMethodIcons {
+            width: 220px;
+        }
+    }
+}
+
+@mixin footer-max-width-413() {
+    #footerIcons {
+        .paymentMethodIcons {
+                width: 186px;
+        }
+        .fa {
+            width: 30px;
+            height: 30px;
+            line-height: 30px;
+        }
+
+        .btn{
+            display:block;
+            margin-bottom:10px;
         }
     }
 }

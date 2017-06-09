@@ -16,9 +16,10 @@
     header {
         #row1 {
             .link {
-                font-size: 10px;
+                font-size: 9px;
                 padding: 10px 5px;
                 height: auto;
+                margin-bottom: 5px;
             } // header #row1 .link end
             .currencyDropdown {
                 width: 100%;
@@ -33,6 +34,12 @@
             }
         } // header #row1 end
         #row3 {
+
+            #navbar1{
+                ul{
+                    margin:0px;
+                }
+            }
             .navbar-toggle {
                 float: none;
                 margin-right: auto;

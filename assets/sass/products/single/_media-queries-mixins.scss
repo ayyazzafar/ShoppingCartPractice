@@ -1,26 +1,31 @@
-@mixin single-max-width-768(){
-    #singleProductPage #gallerySlider
-    {
-        .glyphicon
-        {
-                margin-top: 0;
-            .glyphicon-chevron-right{
-                margin-right:5px;
-                
+@mixin single-max-width-768() {
+    #singleProductPage #gallerySlider {
+        .glyphicon {
+            margin-top: 0;
+            .glyphicon-chevron-right {
+                margin-right: 5px;
             }
-
-            .glyphicon-chevron-left{
-                margin-left:5px;
-                
+            .glyphicon-chevron-left {
+                margin-left: 5px;
             }
         }
     }
 }
 
-@mixin single-max-width-767(){
-    #singleProductPage h1
-    {
-        margin-top:20px;
-        font-size:26px;
+@mixin single-max-width-767() {
+    #singleProductPage {
+        h1 {
+            margin-top: 20px;
+            font-size: 26px;
+        }
+        #gallerySlider .carousel-control {
+            bottom: 66px;
+            &.right {
+                right: -1px;
+            }
+            &.left {
+                left: -1px;
+            }
+        }
     }
 }

@@ -13,10 +13,15 @@
 
 // for devices smaller than tablets
 @media( max-width:767px) {
-    
+
     @include header-max-width-767();
     @include shared-max-width-767();
     @include home-max-width-767();
     @include single-max-width-767();
     @include footer-max-width-767();
+}
+
+// devices smaller than iPhone 6 plus
+@media (max-width:413px){
+    @include footer-max-width-413();
 }

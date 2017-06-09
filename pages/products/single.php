@@ -119,9 +119,9 @@
 
                                             <a href="https://facebook.com" class="pinterest"><i class="fa fa-pinterest"></i></a>
                                         </div>
-
+                                        <div class="clearfix"></div>
                                     </div>
-                                    <div class="clearfix"></div>
+
                                     <div class="col-sm-6 details">
                                         <h1>
                                             <?php echo $product->title; ?>
@@ -159,6 +159,7 @@
                                         <i class="glyphicon glyphicon-shopping-cart
                                 "></i> Add to Cart
                                     </a>
+                                        <div class="clearfix"></div>
                                     </div>
                                 </div>
 
