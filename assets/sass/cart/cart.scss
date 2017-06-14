@@ -1,0 +1,15 @@
+@import "../theme";
+#cartPage {
+    h1 {
+        margin: 24px 0px !important;
+    }
+    .content {
+        margin-bottom: 40px;
+
+        .paymentCol{
+            .paymentHeading{
+                margin-bottom:15px;
+            }
+        }
+    }
+}

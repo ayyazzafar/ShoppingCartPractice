@@ -155,7 +155,7 @@
                                         <div class="newPrice price">$10,452.00</div>
                                         <br>
 
-                                        <a class="btn  btnStyle2">
+                                        <a href="<?php echo $base_dir."pages/cart/"; ?>" class="btn  btnStyle2">
                                         <i class="glyphicon glyphicon-shopping-cart
                                 "></i> Add to Cart
                                     </a>
