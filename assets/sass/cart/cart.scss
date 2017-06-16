@@ -6,6 +6,12 @@
     .content {
         margin-bottom: 40px;
 
+        .description{
+            line-height:25px;
+        }
+        .cartCol{
+                border-right: 1px solid #e8e7e7;
+        }
         .paymentCol{
             .paymentHeading{
                 margin-bottom:15px;

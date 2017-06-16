@@ -1,3 +1,7 @@
+<?php 
+function generateProductTile($product){
+    global $base_dir;
+?>
 <div class="product">
     <div class="img" style="background-image:url(<?php 
         
@@ -52,3 +56,10 @@
 
 
 </div>
+
+<?php
+}
+
+?>
+
+

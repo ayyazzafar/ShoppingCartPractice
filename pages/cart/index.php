@@ -1,7 +1,16 @@
 <?php
     $base_dir = "../../";
+    
     include($base_dir.'includes/header.php');
-          
+    include($base_dir.'pages/products/productsDb.php');
+
+    $product = (object) $products[0];
+    $product->cartQty = 1;
+    
+    $cartProducts[] = $product;     
+    $cartProducts[] = $product;     
+    $cartProducts[] = $product;     
+    $cartProducts[] = $product;     
 ?>
     <div id="cartPage" class="mt-20">
         <div class="container">
@@ -13,51 +22,56 @@
                         <a href="<?php echo $base_dir; ?>">Home</a> / Cart
                     </div>
 
-                    <h1> 2 items in your cart</h1>
+                    <h1> <?php echo count($cartProducts); ?>  items in your cart</h1>
                     <div class="content mt-50">
                         <div class="row">
-                            <div class="col-sm-8">
-                                <div class="row">
-                                    <div class="col-sm-3">
-                                        <img src="<?php echo $base_dir."assets/uploads/z.jpg "; ?>" class="img-responsive" />
-                                        <br>
-
-                                    </div>
-
-                                    <div class="col-sm-5">
-                                        <p> Turquoise Tassel Necklace in Silver with Grey Druzy. Long Turquoise Tassel Druzy
-                                            Necklace in Silver. Long Bohemian Style Tasssel Necklace.</p> <br>
-                                    </div>
-                                    <div class="col-sm-2 col-xs-3">
-                                        <select name="qty" id="" class="qty form-control">
-                                            <option value=""></option>
-                                        </select>
-                                         <br>
-                                    </div>
-                                    <div class="col-sm-2 col-xs-8 text-right">$52,133 USD</div>
-                                     <br>
-                                </div>
+                            <div class="col-sm-8 cartCol">
+                                <?php 
+                                require_once("{$base_dir}pages/cart/loop-item.php");
+                                $subTotal = 0;
+                                foreach($cartProducts as $product):
+                                    $totalPrice = $product->price * $product->cartQty; 
+                                    $subTotal += $totalPrice;
+                                    generateCartProduct($product);
+                                 ?>
+                                
+                                <?php endforeach; ?>
                             </div>
 
 
                             <div class="col-sm-4 radioBtns paymentCol">
-                                
-                                <p class="paymentHeading"><strong>How you'll pay</strong></p>
-                                <div>
-                                    <input type="radio" id="chbxCreditCard" checked name="paymentMethod" value="creditCard">
-                                    <label for="chbxCreditCard"> 
-                                        <img width="90%" src="<?php echo $base_dir."assets/images/paymentMethodsIcons.png"; ?>" /> </label>
-                                </div>
-                                <div>
-                                    <input type="radio" id="chbxPaypal" name="paymentMethod" value="paypal" />
-                                    <label for="chbxPaypal"> <img src="<?php echo $base_dir."assets/images/paypalIcon.png"; ?>" width="80" /> </label>
-                                </div>
-
-
+                                <?php require_once("{$base_dir}pages/cart/paymentCol.php"); ?>
                             </div>
 
                         </div>
+                        <!-- .row end-->
 
+                        <div class="row">
+                            <div class="col-sm-12">
+                                <br><br>
+                                <hr>
+                                <h2>You might also like...</h2>
+                                <hr><br><br>
+                            </div>
+                            <?php 
+                            include($base_dir."pages/products/loop-item.php");
+                            $index = 0;
+                            foreach($products as $product):
+                            
+                            if($index==8) break;
+
+                           
+                                $product = (object) $product;
+                             ?>
+                            <div class="col-sm-3">
+                                <?php 
+                                generateProductTile($product);
+                                 ?>
+                            </div>
+                            <?php 
+                            $index++;
+                            endforeach; ?>
+                        </div>
 
 
                     </div>

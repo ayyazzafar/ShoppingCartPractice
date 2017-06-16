@@ -8,7 +8,7 @@
    
 
     <!-- Custom styles for this template -->
-    <link href="<?php echo $base_dir; ?>assets/css/styles.css" rel="stylesheet" type="text/css">
+    <link href="<?php echo $base_dir; ?>assets/css/styles.css?version=<?php echo rand(); ?>" rel="stylesheet" type="text/css">
 
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
