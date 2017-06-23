@@ -66,36 +66,7 @@ $base_dir = "";
                 </div>
 
                 <?php 
-            $products = array(
-                                 array(
-                                    'title'=>  "1 Smart Phone V1",
-                                    'price' =>  102323, 
-                                    'rating' => 2,
-                                    'img'    => 'product1.jpg', 
-                                    'discount'=>20
-                                ),
-
-                                array(
-                                    'title'=>  "1 Smart Phone V1",
-                                    'price' =>  102323, 
-                                    'rating' => 2,
-                                    'img'    => 'product1.jpg', 
-                                    'discount'=>70
-                                ),
-
-                                array(
-                                    'title'=>  "1 Smart Phone V1",
-                                    'price' =>  102323, 
-                                    'rating' => 2,
-                                    'img'    => 'product1.jpg', 
-                                    'discount'=>0
-                                ),
-
-                                
-
-                                
-                            );
-
+                require_once($base_dir."pages/products/productsDb.php");
 
             ?>
 
