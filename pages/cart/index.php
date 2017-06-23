@@ -1,6 +1,11 @@
 <?php
     $base_dir = "../../";
     
+    $shipping_cost = 14;
+    $config = (object) array(
+        'shippingCost' => $shipping_cost
+    );
+
     include($base_dir.'includes/header.php');
     include($base_dir.'pages/products/productsDb.php');
 
@@ -40,7 +45,7 @@
                             </div>
 
 
-                            <div class="col-sm-4 radioBtns paymentCol">
+                            <div id="paymentCol" class="col-sm-4 radioBtns paymentCol">
                                 <?php require_once("{$base_dir}pages/cart/paymentCol.php"); ?>
                             </div>
 
@@ -86,7 +91,11 @@
         <?php include($base_dir."/includes/siteInfoBanner.php"); ?>
 
     </div>
+<script>
 
+    var config = <?php echo json_encode($config) ?>;
+
+</script>
 <script src="<?php echo $base_dir; ?>assets/js/pages/cart/Cart.js"></script> 
 <script defer src="<?php echo $base_dir; ?>assets/js/pages/cart/index.js"></script> 
     <?php include($base_dir."includes/footer.php");

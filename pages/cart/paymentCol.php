@@ -11,12 +11,16 @@
 <br><br>
 <div class="row">
     <div class="col-xs-6">Item(s) total</div>
-    <div class="col-xs-6 text-right">USD <span class="amount"><?php echo number_format($subTotal); ?></span></div>
+    <div class="col-xs-6 text-right subTotal">USD <span class="amount"><?php echo number_format($subTotal); ?></span></div>
 </div>
 <br>
 <div class="row">
     <div class="col-xs-6">Shipping</div>
-    <div class="col-xs-6 text-right shippingCharges">USD <span class="amount">14.00</span></div>
+    <div class="col-xs-6 text-right shippingCharges">USD <span class="amount"><?php 
+        
+        $grandTotal = $subTotal + $shipping_cost;
+        echo $shipping_cost; 
+    ?></span></div>
 </div>
 
 
@@ -24,8 +28,8 @@
 
 <div class="row">
     <div class="col-xs-6"><strong>Total (<?php echo count($cartProducts); ?> item)</strong></div>
-    <div class="col-sm-6 text-right">
-        <strong>USD <span class="amount">72</span></strong>
+    <div class="col-sm-6 text-right grandTotal">
+        <strong>USD <span class="amount"><?php echo number_format($grandTotal); ?></span></strong>
     </div>
 </div>
 

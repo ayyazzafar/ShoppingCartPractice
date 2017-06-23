@@ -23,7 +23,10 @@ function generateCartProduct($product){
         </select>
         <br>
     </div>
-    <div class="col-sm-2 col-xs-8 text-right"><strong>$<?php echo number_format($product->price); ?> USD</strong></div>
+    <div class="productTotal col-sm-2 col-xs-8 text-right"><strong>$
+    <span class="amount">
+        <?php echo number_format($product->price); ?>
+    </span> USD</strong></div>
     <br>
 </div>
 <?php 

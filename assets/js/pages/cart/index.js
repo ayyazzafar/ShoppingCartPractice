@@ -1,8 +1,5 @@
 var cart = new Cart();
-cart.name = 'ayyaz';
-var cart = new Cart();
 
-var cart = new Cart();
 
 
 $('#cartPage .cartItem .remove').click(function(e){

@@ -9,6 +9,7 @@ Cart.prototype.item = {db:{}, remove:null, drawRemove:null};
 // #Remove Step 1
 Cart.prototype.item.remove = function(id){
     var self = this;
+
     self.item.db.remove.call(self, id).then(function(response){
         if(response.status){
             self.item.drawRemove.call(self, id);
@@ -31,24 +32,41 @@ Cart.prototype.item.db.remove = function(id){
 
 // #Remove Step 3
 Cart.prototype.item.drawRemove = function(id){
-    
+  
    var $cartItem = $('#cartProduct'+id);
 
     $cartItem.css('opacity', 0);
     
     setTimeout(()=>{
         $cartItem.remove();
+        this.adjustAmounts();
     }, 400);
 
     /////
 
 
-  this.adjustAmounts();
+    
 
     
 }
 
 
 Cart.prototype.adjustAmounts = function(){
+    
+    var subTotal = 0;
+
+    $('#cartPage .cartItem').each(function(item, index){
+        var $item = $(this);
+        var productTotal = parseInt($item.find('.productTotal .amount').text().replace(',', ''));
+
+        subTotal+=productTotal;
+        
+    });
+
+
+    $('#paymentCol .subTotal .amount').html(number_format(subTotal));
+    var grandTotal = subTotal + config.shippingCost;
+
+    $('#paymentCol .grandTotal .amount').html(number_format(grandTotal));
     
 }
