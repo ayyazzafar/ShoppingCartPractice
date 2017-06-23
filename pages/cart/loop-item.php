@@ -2,7 +2,7 @@
 function generateCartProduct($product){
     global $base_dir;
 ?>
-<div class="row">
+<div class="row cartItem" id="cartProduct<?php echo $product->id;  ?>" data-productId="<?php echo $product->id; ?>">
     <div class="col-sm-3">
         <img src="<?php echo " {$base_dir}assets/uploads/{$product->img}"; ?>" class="img-responsive" />
         <br>
@@ -12,7 +12,8 @@ function generateCartProduct($product){
     <div class="col-sm-5 description">
         <p>
             <?php echo $product->description; ?>
-        </p> <br>
+        </p> 
+        <a href=""  class="remove"><i class="fa fa-trash"></i> Remove</a>
     </div>
     <div class="col-sm-2 col-xs-3">
         <select name="qty" id="" class="qty form-control">

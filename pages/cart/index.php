@@ -4,13 +4,14 @@
     include($base_dir.'includes/header.php');
     include($base_dir.'pages/products/productsDb.php');
 
-    $product = (object) $products[0];
-    $product->cartQty = 1;
-    
-    $cartProducts[] = $product;     
-    $cartProducts[] = $product;     
-    $cartProducts[] = $product;     
-    $cartProducts[] = $product;     
+    for($i = 0; $i<=2; $i++)
+    {
+         $product = (object) $products[$i];
+        $product->cartQty = 1;
+        $cartProducts[] = $product;  
+    }
+   
+ 
 ?>
     <div id="cartPage" class="mt-20">
         <div class="container">
@@ -86,5 +87,6 @@
 
     </div>
 
-
+<script src="<?php echo $base_dir; ?>assets/js/pages/cart/Cart.js"></script> 
+<script defer src="<?php echo $base_dir; ?>assets/js/pages/cart/index.js"></script> 
     <?php include($base_dir."includes/footer.php");
