@@ -34,13 +34,21 @@ Cart.prototype.item.db.remove = function(id){
 Cart.prototype.item.drawRemove = function(id){
   
    var $cartItem = $('#cartProduct'+id);
+   var $cartContent = $cartItem.find('.cartContent');
+    //$cartItem.css('opacity', 0);
 
-    $cartItem.css('opacity', 0);
+    $cartContent.css('opacity', 0);
+
     
-    setTimeout(()=>{
-        $cartItem.remove();
-        this.adjustAmounts();
-    }, 400);
+    
+   
+        $cartItem.slideUp(400);
+        setTimeout(()=>{
+            $cartItem.remove();
+            this.adjustAmounts();
+        }, 400);
+        
+   
 
     /////
 
