@@ -11,3 +11,13 @@ $('#cartPage .cartItem .remove').click(function(e){
     cart.removeItem(productId);
         
 });;
+
+
+$('#cartPage .cartItem select.qty').change(function(e){
+
+    e.preventDefault();
+    var qty = $(this).val();
+    var id = $(this).closest('.cartItem').attr('data-productid');
+    cart.changeItemQty(id, qty);
+        
+});;

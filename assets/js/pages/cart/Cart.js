@@ -1,10 +1,60 @@
 var Cart = function(){}
 
+Cart.prototype.item = {db:{}, remove:null, drawRemove:null};
+
 Cart.prototype.removeItem = function(id){
     this.item.remove.call(this, id);
 }
 
-Cart.prototype.item = {db:{}, remove:null, drawRemove:null};
+Cart.prototype.changeItemQty = function(id, qty){
+
+    this.item.changeQty.call(this, id, qty);
+
+}
+
+Cart.prototype.item.changeQty = function(id, qty){
+
+    var self = this;
+    this.item.db.updateQty(id, qty).then(response=>{
+            self.item.drawChangeQty.call(self, id, qty);
+    });
+    
+}
+
+Cart.prototype.item.drawChangeQty = function(id, qty){
+
+    qty = parseInt(qty);
+    var $cartItem = $('#cartProduct'+id);
+    var unitPrice = parseInt($cartItem.find('.unitPrice .amount').text().split(',').join(''));
+    
+    var total = number_format(qty * unitPrice);
+
+
+    $cartItem.find('.productTotal .amount').text(total);
+
+    if(qty>1)
+    {
+        $cartItem.find('.unitPrice').removeClass('hidden');
+    }
+    else 
+    {
+        $cartItem.find('.unitPrice').addClass('hidden');
+    }
+    console.log(this);
+    this.adjustAmounts();
+    
+}
+
+
+Cart.prototype.item.db.updateQty = (id, qty)=>{
+
+    var promise = new Promise(function(resolve, reject){
+        resolve({status:1});
+    });
+    return promise;
+
+}
+
 
 // #Remove Step 1
 Cart.prototype.item.remove = function(id){
