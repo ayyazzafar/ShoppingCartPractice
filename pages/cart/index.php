@@ -28,7 +28,7 @@
                         <a href="<?php echo $base_dir; ?>">Home</a> / Cart
                     </div>
 
-                    <h1> <?php echo count($cartProducts); ?>  items in your cart</h1>
+                    <h1> <span class="cartQty"><?php echo count($cartProducts); ?></span>  items in your cart</h1>
                     <div class="content mt-50">
                         <div class="row">
                             <div class="col-sm-8 cartCol">

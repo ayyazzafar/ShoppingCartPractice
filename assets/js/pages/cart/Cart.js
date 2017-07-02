@@ -39,24 +39,23 @@ Cart.prototype.item.drawRemove = function(id){
 
     $cartContent.css('opacity', 0);
 
-    
-    
-   
         $cartItem.slideUp(400);
         setTimeout(()=>{
             $cartItem.remove();
             this.adjustAmounts();
+            this.adjustQty();
         }, 400);
-        
-   
-
-    /////
-
-
-    
-
-    
+ 
 }
+
+
+
+
+Cart.prototype.adjustQty = function(){
+   var cartQty =  $("#cartPage .cartItem").length;
+   // update qty
+   $('#cartPage .cartQty').text(cartQty);
+};
 
 
 Cart.prototype.adjustAmounts = function(){
@@ -73,7 +72,7 @@ Cart.prototype.adjustAmounts = function(){
 
 
     $('#paymentCol .subTotal .amount').html(number_format(subTotal));
-    var grandTotal = subTotal + config.shippingCost;
+    var grandTotal = subTotal + (subTotal > 0? config.shippingCost:0);
 
     $('#paymentCol .grandTotal .amount').html(number_format(grandTotal));
     

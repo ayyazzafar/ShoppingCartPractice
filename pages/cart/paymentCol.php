@@ -27,7 +27,7 @@
 <hr>
 
 <div class="row">
-    <div class="col-xs-6"><strong>Total (<?php echo count($cartProducts); ?> item)</strong></div>
+    <div class="col-xs-6"><strong>Total (<span class="cartQty"><?php echo count($cartProducts); ?></span> item)</strong></div>
     <div class="col-sm-6 text-right grandTotal">
         <strong>USD <span class="amount"><?php echo number_format($grandTotal); ?></span></strong>
     </div>
