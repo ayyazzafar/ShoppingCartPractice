@@ -1,6 +1,11 @@
 <?php 
 function generateCartProduct($product){
     global $base_dir;
+    
+    $cartQty        = $product->cartQty;
+    $actualUnitPrice = $product->price;
+    $unitPrice = ((100 - $product->discount) / 100) *$product->price;
+    $totalPrice = ($cartQty * $unitPrice);
 ?>
 <div class="row cartItem" id="cartProduct<?php echo $product->id;  ?>" data-productId="<?php echo $product->id; ?>">
     <div class="cartContent">
@@ -28,13 +33,18 @@ function generateCartProduct($product){
             <strong class="productTotal">
                 $
     <span class="amount">
-        <?php echo number_format($product->price * $product->cartQty); ?>
+        <?php echo number_format($totalPrice); ?>
     </span> USD</strong>
         <br>
 
-        <div class="unitPrice <?php echo  $product->cartQty<2?'hidden':'' ?>">
+        <div class="unitPrice <?php echo  $cartQty<2 && $product->discount<=0?'hidden':'' ?>">
             <i class="text-muted">
-            USD <span class="amount"><?php echo number_format($product->price); ?></span>
+            <span style="text-decoration:line-through" class="<?php if($product->discount<=0){echo 'hidden'; }?>">
+                $<?php echo number_format($actualUnitPrice); ?>
+            </span> 
+            $<span class="amount">
+                <?php echo number_format($unitPrice); ?>
+            </span>
             </i>
             </div>
 

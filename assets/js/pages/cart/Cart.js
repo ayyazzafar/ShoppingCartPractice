@@ -25,7 +25,7 @@ Cart.prototype.item.drawChangeQty = function(id, qty){
 
     qty = parseInt(qty);
     var $cartItem = $('#cartProduct'+id);
-    var unitPrice = parseInt($cartItem.find('.unitPrice .amount').text().split(',').join(''));
+    var unitPrice = parseInt($cartItem.find('.unitPrice .amount').text().trim().split(',').join(''));
     
     var total = number_format(qty * unitPrice);
 
