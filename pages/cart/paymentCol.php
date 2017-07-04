@@ -1,3 +1,11 @@
+<?php 
+
+
+function generatePaymentCol($subTotal, $shipping_cost, $cartProducts)
+{ 
+    global $base_dir;
+?>
+
 <p class="paymentHeading"><strong>How you'll pay</strong></p>
 <div>
     <input type="radio" id="chbxCreditCard" checked name="paymentMethod" value="creditCard">
@@ -44,3 +52,7 @@
 
 
 </div>
+
+<?php 
+} 
+?>

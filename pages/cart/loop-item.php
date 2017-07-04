@@ -39,12 +39,15 @@ function generateCartProduct($product){
 
         <div class="unitPrice <?php echo  $cartQty<2 && $product->discount<=0?'hidden':'' ?>">
             <i class="text-muted">
-            <span style="text-decoration:line-through" class="<?php if($product->discount<=0){echo 'hidden'; }?>">
-                $<?php echo number_format($actualUnitPrice); ?>
+            <span style="text-decoration:line-through " class="actualUnitPrice <?php if($product->discount<=0){echo 'hidden'; }?>">
+                $<span class="amount"><?php echo number_format($actualUnitPrice); ?></span>
             </span> 
-            $<span class="amount">
-                <?php echo number_format($unitPrice); ?>
+            <span class="unitPrice" >
+                $<span class="amount">
+                    <?php echo number_format($unitPrice); ?>
+                </span>
             </span>
+            
             </i>
             </div>
 

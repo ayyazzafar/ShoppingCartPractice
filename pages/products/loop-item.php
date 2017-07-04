@@ -2,7 +2,7 @@
 function generateProductTile($product){
     global $base_dir;
 ?>
-<div class="product">
+<div class="product" data-productId="<?php echo $product->id; ?>">
     <div class="img" style="background-image:url(<?php 
         
     echo $base_dir; ?>assets/uploads/<?php 
@@ -47,7 +47,7 @@ function generateProductTile($product){
         </div>
         <!-- Rating end-->
 
-        <a class="btn  btnStyle1">
+        <a class="btn  btnStyle1 addToCartBtn">
         <i class="glyphicon glyphicon-shopping-cart
 "></i> Add to Cart
         </a>

@@ -2,7 +2,7 @@ var cart = new Cart();
 
 
 
-$('#cartPage .cartItem .remove').click(function(e){
+$('body').on('click', '#cartPage .cartItem .remove', function(e){
 
     e.preventDefault();
 
@@ -13,7 +13,7 @@ $('#cartPage .cartItem .remove').click(function(e){
 });;
 
 
-$('#cartPage .cartItem select.qty').change(function(e){
+$('body').on('change', '#cartPage .cartItem select.qty',function(e){
 
     e.preventDefault();
     var qty = $(this).val();
@@ -21,3 +21,11 @@ $('#cartPage .cartItem select.qty').change(function(e){
     cart.changeItemQty(id, qty);
         
 });;
+
+
+$("body").on('click', '#cartPage #similarProducts .addToCartBtn', function(e){
+    e.preventDefault();
+   var id =  $(this).closest('[data-productId]').attr('data-productId');
+   
+    cart.addProduct(id);
+});

@@ -1,2 +1,0 @@
-1- Confirm that if we are using discounted price to reflect as unit price in cart items
-2- Add to cart with fade effect in cart page without page reload
