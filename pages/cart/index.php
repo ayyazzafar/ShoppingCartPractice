@@ -79,7 +79,7 @@
                            
                                 $product = (object) $product;
                              ?>
-                            <div class="col-sm-3">
+                            <div class="col-sm-3 similarProduct" id="product<?php echo $product->id;?>" >
                                 <?php 
                                 generateProductTile($product);
                                  ?>

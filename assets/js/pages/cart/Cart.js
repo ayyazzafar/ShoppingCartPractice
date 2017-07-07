@@ -154,23 +154,24 @@ Cart.prototype.adjustAmounts = function () {
 
 Cart.prototype.drawAddProduct = function (productClObj) {
 
+
     var product = productClObj.product;
 
 
     var $template = $("#cartItemTemplate").find('.cartItem');
 
     $template.attr('data-productId', product.id);
-    $template.attr('id', "cartProduct"+product.id);
-    $template.find('.cartContent img').attr('src', base_dir+"assets/uploads/"+product.img);
+    $template.attr('id', "cartProduct" + product.id);
+    $template.find('.cartContent img').attr('src', base_dir + "assets/uploads/" + product.img);
     $template.find('.cartContent .description p').html(product.description);
 
     $selectElement = $template.find('.cartContent select[name="qty"]');
 
     $selectElement.html('');
     for (var i = 1; i <= product.qty; i++) {
-        $selectElement.html( $selectElement.html()+ "<option value='" + i + "'>" + i + "</option>");
+        $selectElement.html($selectElement.html() + "<option value='" + i + "'>" + i + "</option>");
     }
-    
+
     var discount = productClObj.calculateDiscount();
     var actualUnitPrice, unitPrice, totalPrice;
 
@@ -178,26 +179,22 @@ Cart.prototype.drawAddProduct = function (productClObj) {
     unitPrice = product.price - discount;
     totalPrice = unitPrice * product.qty;
 
-    
-    $template.find('.cartContent .productTotal .amount').html (totalPrice);
+
+    $template.find('.cartContent .productTotal .amount').html(totalPrice);
     $template.find('.cartContent .unitPrice .amount').html(unitPrice);
     $template.find('.cartContent .actualUnitPrice .amount').html(actualUnitPrice);
 
-    if( product.cartQty<2 && product.discount<=0)
-    {
+    if (product.cartQty < 2 && product.discount <= 0) {
         $template.find('.cartContent .unitPrice').addClass('hidden');
     }
-    else 
-    {
+    else {
         $template.find('.cartContent .unitPrice').removeClass('hidden');
     }
 
-    if(product.discount<=0)
-    {
+    if (product.discount <= 0) {
         $template.find('.cartContent .actualUnitPrice').addClass('hidden');
     }
-    else
-    {
+    else {
         $template.find('.cartContent .actualUnitPrice').removeClass('hidden');
     }
 
@@ -215,33 +212,42 @@ Cart.prototype.drawAddProduct = function (productClObj) {
 Cart.prototype.addProduct = function (id) {
 
     var self = this;
+    var pr = new Promise(function (resolve, reject) {
+        if (Product) {
+            var product = new Product();
 
-    if (Product) {
-        var product = new Product();
+            product.getProduct(id).then(function (response) {
 
-        product.getProduct(id).then(function (response) {
+                if (response.status) {
+                    self.drawAddProduct(product);
+                    resolve(id);
+                }
+                else {
+                    alert(response.message);
+                }
+            });
 
-            if (response.status) {
-                self.drawAddProduct(product);
-            }
-            else {
-                alert(response.message);
-            }
-        });
-
-    }
-    else {
-        alert('Product class not found.')
-    }
-
-
-
-
+        }
+        else {
+            alert('Product class not found.')
+        }
+    });
 
 
+    return pr;
+
+}
 
 
+Cart.prototype.removeSimilarProduct = function(id){
+    var self = this;
+    $("#cartPage #product"+id+" .product").fadeOut(800, function(){
+        $("#cartPage #product"+id).animate({width:0, padding:0, margin:0}, 300);
+    });
 
-
+    setTimeout(function(){
+        $("#cartPage #product"+id).remove();
+    }, 2100)
+    
 }
 

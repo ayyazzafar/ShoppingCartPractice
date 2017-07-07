@@ -27,5 +27,5 @@ $("body").on('click', '#cartPage #similarProducts .addToCartBtn', function(e){
     e.preventDefault();
    var id =  $(this).closest('[data-productId]').attr('data-productId');
    
-    cart.addProduct(id);
+    cart.addProduct(id).then(cart.removeSimilarProduct);
 });
