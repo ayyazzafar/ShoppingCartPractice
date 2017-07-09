@@ -43,7 +43,7 @@ function generatePaymentCol($subTotal, $shipping_cost, $cartProducts)
 
 <div class="row">
     <div class="col-sm-12">
-        <button type="submit" class="btn btn-primary btn-block btnStyle2">Proceed to Checkout</button>
+        <a href="<?php echo $base_dir; ?>pages/checkout/" type="submit" class="btn btn-primary btn-block btnStyle2">Proceed to Checkout</a>
 
         <p class="text-muted small text-center">
             Local taxes included (where applicable). Additional duties and taxes may apply.
